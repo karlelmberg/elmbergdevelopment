@@ -1,0 +1,30 @@
+﻿@using Newtonsoft.Json
+
+@model Web.Models.ViewModels.PageViewModel<Web.Models.Pages.RssNewsPage>
+
+
+<div ng-controller="RssNewsController" ng-init="init(@JsonConvert.SerializeObject(@Model.CurrentPage.RssItemList))">
+    <div class="main-text">
+        <h1>@Model.CurrentPage.Heading</h1>
+        @Model.CurrentPage.Ingress
+    </div>
+    <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-12" ng-repeat="rssItem in rssItemList">
+            <a class="noUnderline" target="_blank" href="{{rssItem.Link}}">
+                <span class="result-tag">{{rssItem.Source}}</span>
+                <h4 class="rss-item-title">{{rssItem.Title}}</h4>
+                <p ng-bind-html="rssItem.Description | unsafe"></p>   
+                @*<p>{{rssItem.Description}}</p>*@
+                <span class="date">{{rssItem.PublicationDate}}</span>
+                <span class="display-link"><span class="text">Läs mer</span><span class="arrow"></span></span>
+            </a>
+        </div>
+    </div>
+    @*<div class="pager">
+        <ul ng-if="pager.pages.length">
+            <li ng-repeat="page in pager.pages">
+                <a ng-click="setListPage(page)" ng-class="pager.currentPage === page ? 'selected' : ''">{{page}}</a>
+            </li>
+        </ul>
+    </div>*@
+</div>
