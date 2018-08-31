@@ -271,6 +271,7 @@
     <Content Include="Static\img\edbest.svg" />
     <Content Include="Static\img\ed_icon_best.svg" />
     <Content Include="Static\img\kalle.jpg" />
+    <Content Include="Static\img\kalle_falsterbo.png" />
     <Content Include="Static\img\logga.jpg" />
     <Content Include="Static\img\programming.svg" />
     <Content Include="Static\img\responsive.svg" />

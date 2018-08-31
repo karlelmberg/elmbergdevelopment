@@ -226,11 +226,12 @@
 
         .start-page .background-grey .about-me .about-me-image {    
             margin-left: 60px;
-            margin-top: 65px;
+            margin-top: 55px;
         }
 
-            .start-page .background-grey .about-me .about-me-image img {                           
-                border-radius: 50%;                        
+            .start-page .background-grey .about-me .about-me-image img {
+                border-radius: 50%;
+                width: 200px;
             }
 
         .start-page .background-grey .about-me .about-me-info {
