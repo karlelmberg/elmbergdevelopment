@@ -1,13 +1,39 @@
 ﻿app.controller("RssNewsController", ["$scope", function ($scope) {
     $scope.rawNewsList = [];
+    $scope.newsItemList = [];
+    $scope.newsItem = {};
 
     $scope.init = function (rssItemList) {
         $scope.rssItemList = rssItemList;
+        $scope.manipulaterssItemList(rssItemList);
         //$scope.setPager(rssItemList);
 
     }
   
+    $scope.manipulaterssItemList = function (rssItemList) {
+        $.each(rssItemList,
+            function (key, value) {
+                var d = value.Description;
+                var i = d.split('<br>');
+                var image = i[0];
+                var description = i[1];
+                var link = value.Link;
+                var publicationDate = value.PublicationDate.replace(/\//g, "-");               
+                var title = value.Title;
 
+                $scope.newsItem = {
+                    image: image,
+                    link: link,
+                    publicationDate: publicationDate,
+                    title: title,
+                    description: description
+            };     
+                $scope.newsItemList.push($scope.newsItem);
+            });
+       
+        //var description = rssItemList.title.description;
+        //var parts = myString.split("Half");
+    }
     //$scope.setPager = function (rssItemList) {
     //    var vm = this;
 
