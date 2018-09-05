@@ -3,13 +3,14 @@
     $scope.newsItemList = [];
     $scope.newsItem = {};
 
-    $scope.init = function (rssItemList) {
+    $scope.init = function (rssItemList, sourceSupplier) {
         $scope.rssItemList = rssItemList;
-        $scope.manipulaterssItemList(rssItemList);
-        //$scope.setPager(rssItemList);
 
+        if (sourceSupplier.Value === "idg")
+             $scope.manipulaterssItemList(rssItemList);
+        //$scope.setPager(rssItemList);
     }
-  
+
     $scope.manipulaterssItemList = function (rssItemList) {
         $.each(rssItemList,
             function (key, value) {
@@ -18,7 +19,9 @@
                 var image = i[0];
                 var description = i[1];
                 var link = value.Link;
-                var publicationDate = value.PublicationDate.replace(/\//g, "-");               
+                var pDate = value.PublicationDate.replace(/\//g, "-");
+                var pubdate = new Date(pDate);
+                var publicationDate = pubdate.toISOString().slice(0, 10).replace(/-/g, "");
                 var title = value.Title;
 
                 $scope.newsItem = {
@@ -27,13 +30,20 @@
                     publicationDate: publicationDate,
                     title: title,
                     description: description
-            };     
+                };
                 $scope.newsItemList.push($scope.newsItem);
             });
-       
-        //var description = rssItemList.title.description;
-        //var parts = myString.split("Half");
+        $scope.newsItemList.sort(function (a, b) { return b.publicationDate - a.publicationDate });
+
+        //$.each($scope.newsItemList,
+        //    function (key, value) {
+        //        var pub = new Date(value.publicationDate, "YYYY-MM-DD");
+        //        value.publicationDate = pub;
+        //});
     }
+
+
+
     //$scope.setPager = function (rssItemList) {
     //    var vm = this;
 
