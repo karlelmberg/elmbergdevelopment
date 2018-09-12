@@ -331,6 +331,7 @@
     <Compile Include="Controllers\Pages\ArticleListPageController.cs" />
     <Compile Include="Controllers\Pages\ArticlePageController.cs" />
     <Compile Include="Controllers\Pages\GoogleFotosPageController.cs" />
+    <Compile Include="Controllers\Pages\RssListNewsPageController.cs" />
     <Compile Include="Controllers\Pages\RssNewsPageController.cs" />
     <Compile Include="Controllers\Pages\SitePageDataController.cs" />
     <Compile Include="Controllers\Pages\StandardPageController.cs" />
@@ -354,6 +355,7 @@
     </Compile>
     <Compile Include="Models\Pages\ArticleListPage.cs" />
     <Compile Include="Models\Pages\ArticlePage.cs" />
+    <Compile Include="Models\Pages\RssListNewsPage.cs" />
     <Compile Include="Models\Pages\RssNewsPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
@@ -422,6 +424,7 @@
     <Content Include="Static\components\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\SitePageData\Index.cshtml" />
     <Content Include="Views\RssNewsPage\Index.cshtml" />
+    <Content Include="Views\RssListNewsPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

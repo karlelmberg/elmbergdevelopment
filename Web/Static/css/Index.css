@@ -8,7 +8,6 @@
     position: fixed;
     z-index: 1000;
 }
-
     .header .top-header {
         background-color: white;
         height: 40px;
@@ -108,6 +107,29 @@
                         .header .main-header .container .log-in-search .search a:hover {
                             color: white;
                         }
+
+    .header .log-in-panel {
+        height: 175px;
+        background-color: #fafafa;
+        padding-top: 50px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+    .header .log-in-panel .search-box {
+        border: solid 1px rgba(31, 38, 47, 0.21); 
+        height: 70px;
+        border-radius: 35px;
+        width: 100%;        
+        background-color: #ffffff;             
+        padding-left: 35px;
+        padding-top: 20px;
+        cursor: text;
+    }
+
+        .header .log-in-panel .search-box .magnifying-glass {
+            margin-bottom: 20px;
+        }
 
 /*Footer*/
 .footer {
@@ -267,10 +289,17 @@
     transition: 0.3s;
 }
 
+
     .news-page .news-item:hover {
         cursor: pointer;
-        background-color: darkgray;
-        opacity: 0.5
+        background-color: #99c9ff;
+        opacity: 0.7
+    }
+
+    .news-page .news-item.epi:hover {
+        cursor: pointer;
+        background-color: #99c9ff;
+        opacity: 0.7
     }
 
     .news-page .news-item a.no-underline {
@@ -295,12 +324,19 @@
         .news-page .news-item .news-item-text-container .news-item-read-more {
             margin-top: 15px;
             color: black;
-            font-weight: bold;
+            font-weight: bold;          
         }
 
-            .news-page .news-item .news-item-text-container .news-item-read-more:hover {
-                color: #99c9ff;
-            }
+            /*.news-page .news-item .news-item-text-container .news-item-read-more:hover {
+                color: white;           
+            }*/
+
+        .news-page .news-item .news-item-text-container .news-item-read-more-underline {
+            /*border: 1px solid white;
+            width: 60px;*/
+            height: 2px;         
+            position: absolute;
+        }
 
 
 /* Buttons */

@@ -5,44 +5,82 @@
 
     $scope.init = function (rssItemList, sourceSupplier) {
         $scope.rssItemList = rssItemList;
-
-        if (sourceSupplier.Value === "idg")
-             $scope.manipulaterssItemList(rssItemList);
+        $scope.manipulaterssItemList(rssItemList, sourceSupplier);
         //$scope.setPager(rssItemList);
     }
 
-    $scope.manipulaterssItemList = function (rssItemList) {
-        $.each(rssItemList,
-            function (key, value) {
-                var d = value.Description;
-                var i = d.split('<br>');
-                var image = i[0];
-                var description = i[1];
-                var link = value.Link;
-                var pDate = value.PublicationDate.replace(/\//g, "-");
-                var pubdate = new Date(pDate);
-                var publicationDate = pubdate.toISOString().slice(0, 10).replace(/-/g, "");
-                var title = value.Title;
+    $scope.manipulaterssItemList = function (rssItemList, sourceSupplier) {
+        if (sourceSupplier.Value === "idg") {
+            $.each(rssItemList,
+                function (key, value) {
+                    var d = value.Description;
+                    var i = d.split('<br>');
+                    var image = i[0];
+                    var description = i[1];
+                    var link = value.Link;
+                    var pDate = value.PublicationDate.replace(/\//g, "-");
+                    var pubdate = new Date(pDate);
+                    var publicationDate = pubdate.toISOString().slice(0, 10).replace(/-/g, "");
+                    var title = value.Title;
 
-                $scope.newsItem = {
-                    image: image,
-                    link: link,
-                    publicationDate: publicationDate,
-                    title: title,
-                    description: description
-                };
-                $scope.newsItemList.push($scope.newsItem);
-            });
-        $scope.newsItemList.sort(function (a, b) { return b.publicationDate - a.publicationDate });
+                    $scope.newsItem = {
+                        image: image,
+                        link: link,
+                        publicationDate: publicationDate,
+                        title: title,
+                        description: description
+                    };
+                    $scope.newsItemList.push($scope.newsItem);
+                });
+            $scope.newsItemList.sort(function (a, b) { return b.publicationDate - a.publicationDate });
 
-        //$.each($scope.newsItemList,
-        //    function (key, value) {
-        //        var pub = new Date(value.publicationDate, "YYYY-MM-DD");
-        //        value.publicationDate = pub;
-        //});
+            //$.each($scope.newsItemList,
+            //    function (key, value) {
+            //        var pub = new Date(value.publicationDate, "YYYY-MM-DD");
+            //        value.publicationDate = pub;
+            //});
+        }
+
+        if (sourceSupplier.Value === "epi") {          
+                $.each(rssItemList,
+                    function (key, value) {
+                        //var d = value.Description;
+                        //var i = d.split('<br>');
+                        var d = value.Description.substr(0, 300);
+                        var description = d += "...";
+                        //var description = i[1];
+                        var link = value.Link;
+                        var pDate = value.PublicationDate.replace(/\//g, "-");
+                        var pubdate = new Date(pDate);
+                        var publicationDate = pubdate.toISOString().slice(0, 10).replace(/-/g, "");
+                        var title = value.Title;
+                        $scope.newsItem = {                          
+                            link: link,
+                            publicationDate: publicationDate,
+                            title: title,
+                            description: description
+                        };
+                        $scope.newsItemList.push($scope.newsItem);
+                    });
+                $scope.newsItemList.sort(function (a, b) { return b.publicationDate - a.publicationDate });
+        }     
     }
 
+    $(document).ready(function () {
+        $(".news-item").hover(function () {
+            //$(".news-item-read-more-underline").css("width", "60px").css("border", "1px solid white");
+            //$(".news-item-read-more-underline").css("border", "1px solid white").animate({ "right": "+=100px" }, 8000, "linear");
+            $(".news-item-read-more-underline").css('background-color', 'white');
+            $(".news-item-read-more-underline").animate({ width: ("60px") }, 1000);               
+        }, function () {
+                $(".news-item-read-more-underline").animate({ width: ("0px") }, 1000);
+            }
+        );
+    });
 
+   
+
+    //$("#coolDiv").animate({ "left": "0px" }, "slow");
 
     //$scope.setPager = function (rssItemList) {
     //    var vm = this;

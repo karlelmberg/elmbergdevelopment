@@ -11,24 +11,50 @@
                 @Model.CurrentPage.Ingress
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12" ng-repeat="newsItem in newsItemList">
-                <div class="news-item">
-                    <a class="no-underline" target="_blank" href="{{newsItem.link}}">
-                        <div class="news-picture" ng-bind-html="newsItem.image | unsafe"></div>
-                        <div class="news-item-text-container">
-                            <h4 class="news-item-title">{{newsItem.title}}</h4>
-                            <div class="news-item-description">{{newsItem.description}}</div>
-                            <div class="news-item-date">{{newsItem.publicationDate}}</div>
-                            <div class="news-item-read-more">
-                                Läs mer
+        @if(@Model.CurrentPage.SourceSupplier.ToString() == "idg") { 
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12" ng-repeat="newsItem in newsItemList">
+                    <div class="news-item">
+                        <a class="no-underline" target="_blank" href="{{newsItem.link}}">
+                            <div class="news-picture" ng-bind-html="newsItem.image | unsafe"></div>
+                            <div class="news-item-text-container">
+                                <h4 class="news-item-title">{{newsItem.title}}</h4>
+                                <div class="news-item-description">{{newsItem.description}}</div>
+                                <div class="news-item-date">{{newsItem.publicationDate}}</div>
+                                <div class="news-item-read-more">
+                                    Läs mer
+                                </div>
+                                <div class="news-item-read-more-underline">
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    @*</a>*@
+                        </a>                  
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+        @if(@Model.CurrentPage.SourceSupplier.ToString() == "epi") { 
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12" ng-repeat="newsItem in newsItemList">
+                    <div class="news-item epi">
+                        <a class="no-underline" target="_blank" href="{{newsItem.link}}">                         
+                            <div class="news-item-text-container">
+                                <h4 class="news-item-title">{{newsItem.title}}</h4>
+                                <div class="news-item-description" ng-bind-html="newsItem.description | unsafe"></div>
+                                <div class="news-item-date">{{newsItem.publicationDate}}</div>
+                                <div class="news-item-read-more">
+                                    Läs mer
+                                </div>
+                                <div class="news-item-read-more-underline">
+                                    dfgdfg
+                                </div>
+                            </div>
+                        </a>                  
+                    </div>
+                </div>
+            </div>
+        }
+
     </div>
     @*<div class="pager">
             <ul ng-if="pager.pages.length">
