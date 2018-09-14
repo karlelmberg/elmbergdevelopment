@@ -1,0 +1,5 @@
+C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\bin\Release\DataTransferObjects.dll
+C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\bin\Release\DataTransferObjects.pdb
+C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.csproj.CoreCompileInputs.cache
+C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.dll
+C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.pdb
