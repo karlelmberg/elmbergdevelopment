@@ -15,7 +15,10 @@
                 function (key, value) {
                     var d = value.Description;
                     var i = d.split('<br>');
-                    var image = i[0];
+                    var im = i[0];
+                    var ima = im.replace('<img src="', '');
+                    var imag = ima.replace('" border="0">', '');
+                    var image = imag.trim();
                     var description = i[1];
                     var link = value.Link;
                     var pDate = value.PublicationDate.replace(/\//g, "-");
@@ -69,9 +72,9 @@
     $(document).ready(function () {
         $(".news-item").hover(function () {        
             $(".news-item-read-more-underline").css('background-color', 'white');
-            $(".news-item-read-more-underline").animate({ width: ("60px") }, 1000);               
+            $(".news-item-read-more-underline").animate({ width: ("60px") }, 200);               
         }, function () {
-                $(".news-item-read-more-underline").animate({ width: ("0px") }, 1000);
+                $(".news-item-read-more-underline").animate({ width: ("0px") }, 200);
             }
         );
     });
