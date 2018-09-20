@@ -278,6 +278,8 @@
     <Content Include="Admin\Templates\Units\SideNavigation.ascx" />
     <Content Include="Admin\Templates\Units\TopNavigation.ascx" />
     <Content Include="App_Data\empty.txt" />
+    <Content Include="Errors\404.html" />
+    <Content Include="Errors\500.html" />
     <Content Include="Files\Readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="ImageCache\readme.txt" />
@@ -295,6 +297,7 @@
     <Content Include="Static\components\bootstrap\js\bootstrap.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.min.js" />
     <Content Include="Static\css\Index.css" />
+    <Content Include="Static\img\black_and_white_man_error_page.jpg" />
     <Content Include="Static\img\computer.jpg" />
     <Content Include="Static\img\computer_modified.png" />
     <Content Include="Static\img\development.svg" />
@@ -328,6 +331,7 @@
     <Compile Include="App_Start\SQLiteAssemblyBinding.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Business\Extensions\PageExtensions.cs" />
     <Compile Include="Business\Services\AppFlowMetadata .cs" />
     <Compile Include="Business\ViewModelBuilders\PageViewModelBuilder.cs" />
     <Compile Include="Business\ViewModelBuilders\StartPageViewModelBuilder.cs" />

@@ -98,27 +98,35 @@
                 .header .main-header .container .log-in-search .search {
                     display: inline;
                     margin-left: 8px;
+                    color: #99c9ff;
+                    font-size: 26px;
+                    cursor: pointer;
+                    z-index: 100;
                 }
 
-                    .header .main-header .container .log-in-search .search a {
-                        color: #99c9ff;
-                        font-size: 26px;
+                    .header .main-header .container .log-in-search .search .search-up {
+                        display: inline;
                     }
 
-                        .header .main-header .container .log-in-search .search a:hover {
-                            color: white;
-                        }
+                    .header .main-header .container .log-in-search .search .search-down {
+                        display: none;
+                    }
 
-    .header .log-in-panel {
+                    .header .main-header .container .log-in-search .search:hover {
+                        color: white;
+                    }
+
+    .header .search-panel {
         height: 175px;
         background-color: #fafafa;
         padding-top: 50px;
         padding-left: 30%;
         padding-right: 30%;
         display: none;
+        z-index: 1000;
     }
 
-        .header .log-in-panel .search-box {
+        .header .search-panel .search-box {
             border: solid 1px rgba(31, 38, 47, 0.21);
             height: 70px;
             border-radius: 35px;
@@ -131,21 +139,21 @@
             flex-direction: row;
         }
 
-            .header .log-in-panel .search-box .magnifying-glass {
+            .header .search-panel .search-box .magnifying-glass {
                 margin-bottom: 20px;
                 color: #99c9ff;
             }
 
-            .header .log-in-panel .search-box .search-input {
+            .header .search-panel .search-box .search-input {
                 margin-bottom: 14px;
                 margin-left: 13px;
                 border: none;
                 font-size: 20px;
                 font-family: sans-serif;
-                width: 100%;              
+                width: 90%;
             }
 
-                .header .log-in-panel .search-box .search-input:focus {
+                .header .search-panel .search-box .search-input:focus {
                     outline-width: 0;
                 }
 
@@ -329,6 +337,7 @@
     .news-page .news-item .news-picture img {
         max-width: 100% !important;
         min-width: 100% !important;
+        min-height: 292.5px;
     }
 
     .news-page .news-item .news-item-text-container {
@@ -352,9 +361,79 @@
         .news-page .news-item .news-item-text-container .news-item-read-more-underline {
             /*border: 1px solid white;
             width: 60px;*/
-            height: 2px;
+            height: 3px;
             position: absolute;
         }
+
+
+/* NewsListPage */
+
+.news-list-page .main-text {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 35px;
+}
+
+    .news-list-page .main-text h1 {
+        color: black;
+        text-decoration: none;
+    }
+
+    .news-list-page .main-text p {
+        margin-top: 10px;
+    }
+
+.news-list-page .news-list-item {
+    background-color: #f4f4f4;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+.news-list-page .news-list-item:hover {
+    cursor: pointer;
+    background-color: #99c9ff;
+    opacity: 0.7
+}
+
+    .news-list-page .news-list-item.epi:hover {
+        cursor: pointer;
+        background-color: #99c9ff;
+        opacity: 0.7
+    }
+
+    .news-list-page .news-list-item a.no-underline {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+
+    .news-list-page .news-list-item .news-list-item-picture img {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 292.5px;
+        max-height: 292.5px;
+    }
+
+    .news-list-page .news-list-item .news-list-item-text-container {
+        padding: 25px 20px 50px 20px;
+    }
+
+        .news-list-page .news-list-item .news-list-item-text-container .news-list-item-read-more {
+            margin-top: 15px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .news-list-page .news-list-item .news-list-item-text-container .news-list-item-read-more-underline {
+            height: 3px;
+            position: absolute;
+        }
+
+
 
 
 /* Buttons */
@@ -410,38 +489,17 @@
     background-color: black;
     color: #99c9ff;
 }
-/*
-.header .top-header {
-    background-color: white;
-    height: 40px;
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background-color: black;
+    filter: alpha(opacity=30);
+    opacity: 0.7;
+    display: none;
 }
-
-
-
-.header .main-header .main-menu {
-    list-style: none;
-    margin: 3px auto 0;
-    padding: 0;
-    height: 40px;
-    display: inline-block;
-}
-
-    .header .main-header .main-menu li {
-        list-style: none;
-        float: left;
-        margin: 0;
-        height: 40px;
-        padding: 0;
-    }
-
-        .header .main-header .main-menu li a {
-            color: #363333;
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 0.4px;
-            display: block;
-            height: 40px;
-            margin: 0;
-            padding: 12px 15px 0 15px;
-        }*/

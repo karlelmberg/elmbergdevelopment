@@ -125,3 +125,6 @@ C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Google.Apis.pdb
 C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Google.Apis.xml
 C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Google.Apis.Core.pdb
 C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Google.Apis.Core.xml
+C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\WebGrease.dll
+C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Antlr3.Runtime.dll
+C:\Visual Studio\ElmbergDevelopment\Test\bin\Debug\Antlr3.Runtime.pdb

@@ -8,9 +8,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
-    <meta name="keywords" content="elmbergdevelopment.se" />
-    <meta name="revisit-after" content="4 weeks" />
+    <meta name="description" content="News and articles for developers regarding system development (.NET, EPi ) and technology " />
+    <meta name="keywords" content="Elmbergdevelopment.se, www.Elmbergdevelopment.se, Elmbergdevelopment, Elmberg, Development, Episerver, Epi, C#, .NET, Design, technology, Web" />
+    <link rel="canonical" href="http://www.elmbergdevelopment.se" />
+    @*<meta name="revisit-after" content="4 weeks" />*@
 
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLK68K3');
+    </script>
+    <!-- End Google Tag Manager -->
     @*Favicon*@
     <link rel="icon" type="image/png" sizes="32x32" href="~/Static/img/test_ico.png">
     @*<link rel="icon" type="image/png" sizes="192x192" href="/static/favicons/android-icon-192x192.png">
@@ -69,12 +85,20 @@
     @*@{ Html.RenderPartial("~/Views/Shared/Scripts.cshtml"); }*@
 </head>
 <body ng-app="edApp">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLK68K3"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     @*@Html.FullRefreshPropertiesMetaData()*@
     @Html.Partial("Header", Model);
     <main class="main" role="main" id="main">
         @RenderBody()
         @Html.Partial("Footer", Model);
-        @*<div id="overlay" class="overlay"></div>*@
+        <div class="overlay"></div>
     </main>
 
     <script type='text/javascript' src='/static/components/bootstrap/js/bootstrap.bundle.min.js'></script>

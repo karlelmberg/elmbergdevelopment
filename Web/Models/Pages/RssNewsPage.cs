@@ -21,6 +21,9 @@ namespace Web.Models.Pages
         [Property("RssUrl")]
         public virtual StringProperty RssUrl { get; set; }
 
+        [ImageProperty("Image")]
+        public virtual ImageProperty Image { get; set; }
+
         [Property("SourceSupplier")]
         public virtual StringProperty SourceSupplier { get; set; }
 
