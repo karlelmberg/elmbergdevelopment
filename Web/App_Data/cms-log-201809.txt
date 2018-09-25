@@ -22,4 +22,7 @@
    at KalikoCMS.Mvc.RequestModule.BuildControllerList()
    at KalikoCMS.Mvc.RequestModule.Startup()
    at KalikoCMS.Modules.InitModule.ExecutePostStartupSequence(List`1 sequences)
-   at KalikoCMS.Modules.InitModule.InitializeApplication()
+   at KalikoCMS.Modules.InitModule.InitializeApplication()9/21/2018 3:32 PM [Critical] No controller is registered for pagetype of page 'Google Analytics'
+9/21/2018 3:33 PM [Critical] No controller is registered for pagetype of page 'Google Analytics'
+9/21/2018 3:33 PM [Critical] No controller is registered for pagetype of page 'Google Tag Manager'
+9/22/2018 1:27 PM [Critical] No controller is registered for pagetype of page 'Google Analytics'

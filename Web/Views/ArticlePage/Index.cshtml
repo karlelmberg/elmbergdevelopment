@@ -1,15 +1,48 @@
-﻿@model Web.Models.Pages.ArticlePage
+﻿@model Web.Models.ViewModels.PageViewModel<Web.Models.Pages.ArticlePage>
 
-<div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-        <h1>@Model.Heading</h1>
-        <div>@Model.Ingress</div> 
-        <div>
-            @if (!string.IsNullOrEmpty(Model.Image.ImageUrl))
-            {
-                @Model.Image.ToHtml()
-            }
+<div class="article-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                @if (Model.CurrentPage.Image != null)
+                {
+                    <img class="img-responsive" src="@Model.CurrentPage.Image.ImageUrl" alt="Chania">
+                }
+                <div class="article-page-heading">
+                    <h1>@Model.CurrentPage.Heading</h1>
+                </div>
+                <div class="article-page-startpublish">
+                    @if (Model.CurrentPage.StartPublish != null)
+                    {
+                        <span>@Model.CurrentPage.StartPublish.Value.ToString("yyyy/MM/dd")</span>
+                    }
+                    else
+                    {
+                        <span></span>
+                    }
+                </div>                
+                    @{Html.RenderPartial("SocialMedia", Model);}           
+                <div class="article-page-ingress">
+                    @Model.CurrentPage.Ingress
+                </div>
+                <div class="article-page-main-body">
+                    @Model.CurrentPage.MainBody
+                </div>
+            </div>
         </div>
-        <div>@Model.MainBody.Value</div>
     </div>
 </div>
+
+
+
+@*@foreach (string categoryItem in Model.CurrentPage.NewsPageViewModel.CategoryListItems)
+    {
+    <span class="tag">@categoryItem    </span>
+    }*@
+
+@*@foreach (string categoryItem in Model.CurrentPage.NewsPageViewModel.ListOfCategories)
+    {
+    <span class="tag">@categoryItem</span>
+    }*@
+
+@*@{Html.RenderPartial("SocialMedia", Model);}*@

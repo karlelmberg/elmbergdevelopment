@@ -17,14 +17,13 @@ namespace Web.Models.Pages
         [Property("Ingress")]
         public virtual HtmlProperty Ingress { get; set; }
 
-        [ImageProperty("Image", Width = 960, Height = 280)]
+        [ImageProperty("Image")]
         public virtual ImageProperty Image { get; set; }
-
-        //[Property("Preamble")]
-        //public virtual TextProperty Preamble { get; set; }
 
         [Property("Main body")]
         public virtual HtmlProperty MainBody { get; set; }
+
+        public List<ArticlePage> ArticlePageList { get; set; }
 
     }
 }
