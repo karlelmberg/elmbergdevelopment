@@ -51,13 +51,14 @@
     }
 
         .header .main-header .container {
-            padding-top: 20px;
+            padding-top: 10px;
             max-width: 1380px;
         }
 
             .header .main-header .container ul.main-menu {
-                margin-left: 30%;
+                margin-left: 25%;
                 font-size: 22px;
+                margin-top: 10px;
             }
 
                 .header .main-header .container ul.main-menu li {
@@ -482,8 +483,171 @@
         }
 
 
-/*Control Panel*/
+/* ArticleListPage */
 
+.article-list-page .main-text {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 35px;
+}
+
+    .article-list-page .main-text h1 {
+        color: black;
+        text-decoration: none;
+    }
+
+    .article-list-page .main-text p {
+        margin-top: 10px;
+    }
+
+.article-list-page .article-list-item {
+    background-color: #f4f4f4;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+    .article-list-page .article-list-item:hover {
+        cursor: pointer;
+        background-color: #99c9ff;
+        opacity: 0.7
+    }
+
+
+    .article-list-page .article-list-item a.no-underline {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+
+    .article-list-page .article-list-item .article-list-item-picture img {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 292.5px;
+        max-height: 292.5px;
+    }
+
+    .article-list-page .article-list-item .article-list-item-text-container {
+        padding: 25px 20px 50px 20px;
+    }
+
+        .article-list-page .article-list-item .article-list-item-text-container .article-list-item-read-more {
+            margin-top: 15px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .article-list-page .article-list-item .article-list-item-text-container .article-list-item-read-more-underline {
+            height: 3px;
+            position: absolute;
+        }
+
+/*article page*/
+
+.article-page {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+    .article-page .article-page-image {
+    }
+
+    .article-page .article-page-heading {
+        margin-top: 30px;
+    }
+
+        .article-page .article-page-heading h1 {
+            font-size: 40px;
+        }
+
+    .article-page .article-page-startpublish {
+        font-size: 16px;
+    }
+
+
+    .article-page .social-footer {
+        display: block;
+        width: 100%;
+        margin-top:40px;
+    }
+
+    .article-page .social-footer .social-icons {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+        height: 35px;
+        display: block;
+    }
+
+        .article-page .social-footer .social-icons li {
+            list-style: none;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+
+            .article-page .social-footer .social-icons li a {
+                height: 35px;
+                width: 35px;
+                display: block;
+                padding: 0;
+                background-image: url(/static/img/facebook-social-gray.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 35px 35px;
+                transition: all .15s ease-out;
+            }
+
+                .article-page .social-footer .social-icons li a:hover {
+                    transition: all .15s ease-out;
+                    background-image: url(/static/img/facebook-social-blue.svg);
+                }
+
+                .article-page .social-footer .social-icons li a.twitter {
+                    background-image: url(/static/img/twitter-social-gray.svg);
+                }
+
+                    .article-page .social-footer .social-icons li a.twitter:hover {
+                        transition: all .15s ease-out;
+                        background-image: url(/static/img/twitter-social-blue.svg);
+                    }
+
+                .article-page .social-footer .social-icons li a.email {
+                    background-image: url(/static/img/mail-social-gray.svg);
+                }
+
+                    .article-page .social-footer .social-icons li a.email:hover {
+                        transition: all .15s ease-out;
+                        background-image: url(/static/img/mail-social-blue.svg);
+                    }
+
+                .article-page .social-footer .social-icons li a.print {
+                    background-image: url(/static/img/print-gray.svg);
+                }
+
+                    .article-page .social-footer .social-icons li a.print:hover {
+                        transition: all .15s ease-out;
+                        background-image: url(/static/img/print-blue.svg);
+                    }
+
+    .article-page .article-page-ingress {
+        margin-top: 25px;
+        margin-right: 15%;
+        font-size: 22px;
+        color: darkgray;
+    }
+
+    .article-page .article-page-main-body {
+        margin-top: 25px;
+        margin-right: 15%;
+        font-size: 18px;
+    }
+
+
+/*Control Panel*/
 .control-panel-page {
     background-color: #f4f4f4;
 }
@@ -521,17 +685,27 @@
             }
 
             .control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item {
+                background-color: #fff;
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
                 padding: 10px 10px 10px 10px;
-                border: 2px solid lightgray;
-                border-radius: 5px;
+                -webkit-transition: box-shadow 200ms;
+                transition: box-shadow 200ms;
+                border-radius: 2px;
                 display: flex;
                 flex-direction: row;
                 margin-left: 10px;
                 margin-right: 10px;
                 margin-bottom: 10px;
-                webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12);
-                box-shadow: 0 2px 0px -1px rgba(0,0,0,0.2), 0 1px 3px 0 rgba(0,0,0,0.14), 0 1px 1px 0 rgba(0,0,0,0.12)
             }
+
+                .control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item:after {
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                .control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item:hover:after {
+                    opacity: 1;
+                }
 
                 .control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item .control-panel-link-item-text {
                     text-transform: uppercase;

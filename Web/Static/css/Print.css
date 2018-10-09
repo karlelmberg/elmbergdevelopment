@@ -1,0 +1,22 @@
+﻿.main-header {
+    display: none !important;
+}
+
+.top-header {
+    display: none !important;
+}
+
+.footer {
+    display: none !important;
+}
+
+.main {
+    margin-top: 0 !important;
+}
+
+.article-page-main-body {
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+}
+
+

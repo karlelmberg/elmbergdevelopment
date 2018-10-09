@@ -298,6 +298,7 @@
     <Content Include="Static\components\bootstrap\js\bootstrap.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.min.js" />
     <Content Include="Static\css\Index.css" />
+    <Content Include="Static\css\Print.css" />
     <Content Include="Static\img\black_and_white_man_error_page.jpg" />
     <Content Include="Static\img\computer.jpg" />
     <Content Include="Static\img\computer_modified.png" />
@@ -316,6 +317,7 @@
     <Content Include="Static\img\microsoft.png" />
     <Content Include="Static\img\programming.svg" />
     <Content Include="Static\img\responsive.svg" />
+    <Content Include="Static\img\signature.png" />
     <Content Include="Static\img\test_ico.png" />
     <Content Include="Static\img\web-design.svg" />
     <Content Include="Static\img\web-development.svg" />
