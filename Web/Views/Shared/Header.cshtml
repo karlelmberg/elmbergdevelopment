@@ -1,4 +1,6 @@
-﻿@model Web.Models.ViewModels.IPageViewModel<KalikoCMS.Core.CmsPage>
+﻿@using KalikoCMS
+@using KalikoCMS.Core
+@model Web.Models.ViewModels.IPageViewModel<KalikoCMS.Core.CmsPage>
 <div class="header">
     <div class="top-header">
         <div class="container">
@@ -29,39 +31,45 @@
             <div class="row">
                 <div class="col-lg-10 col-md-10">
                     <ul class="main-menu">
-                        <li><a target="_self" href="#">Articles</a></li>
+                        @foreach (var page in Model.TopMenu)
+                        {
+                            <li>
+                                <a href="@page.PageUrl" title="@page.PageName">@page.PageName</a>
+                            </li>
+                        }                                            
+                        @*<li><a target="_self" href="#">Articles</a></li>
                         <li><a target="_self" href="#">Fotos</a></li>
                         <li><a target="_self" href="/startpage/newslist/">News</a></li>
                         <li><a target="_self" href="#">Pages</a></li>
                         <li><a target="_self" href="#">Gadgets</a></li>
-                        <li><a target="_self" href="#">Miscellaneous</a></li>
-                    </ul>
+                        <li><a target="_self" href="#">Miscellaneous</a></li>*@
+                    </ul>               
                 </div>
                 <div class="col-lg-2 col-md-2">
                     <div class="log-in-search">
                         <div class="log-in">
                             <a href="/Admin" title="Log in">
                                 <i class="fas fa-sign-in-alt"></i>
-                            </a>                          
+                            </a>
                         </div>
                         <div class="search">
                             <div class="search-up">
                                 <i class="fas fa-search"></i>
-                            </div>                        
+                            </div>
                             <div class="search-down">
                                 <i class="fas fa-times"></i>
                             </div>
-                              
-                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="search-panel">
-        <div class="search-box">                     
+        <div class="search-box">
             <div class="magnifying-glass">
-                <i class="fas fa-search fa-2x"></i>             
+                <i class="fas fa-search fa-2x"></i>
             </div>
             <input type="text" class="search-input" placeholder="Search information">
         </div>
