@@ -27,6 +27,8 @@ namespace Web.Models.Pages
         [Property("SourceSupplier")]
         public virtual StringProperty SourceSupplier { get; set; }
 
-        public List<RssItemDto> RssItemList { get; set; }      
+        public List<RssItemDto> RssItemList { get; set; }  
+        
+        public bool SelectedItem { get; set; }
     }
 }

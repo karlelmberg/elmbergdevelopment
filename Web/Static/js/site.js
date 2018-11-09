@@ -17,10 +17,10 @@
         }
     });
 
-    $(".news-list-item").matchHeight({
-        byRow: true,
-        property: 'height',
-        target: null,
-        remove: false
-    });
+    //$(".news-list-item").matchHeight({
+    //    byRow: true,
+    //    property: 'height',
+    //    target: null,
+    //    remove: false
+    //});
 });

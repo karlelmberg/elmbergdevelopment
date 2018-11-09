@@ -69,15 +69,25 @@
         }     
     }
 
-    $(document).ready(function () {
-        $(".news-item").hover(function () {        
-            $(".news-item-read-more-underline").css('background-color', 'white');
-            $(".news-item-read-more-underline").animate({ width: ("60px") }, 200);               
-        }, function () {
-                $(".news-item-read-more-underline").animate({ width: ("0px") }, 200);
-            }
-        );
-    });
+    //$(document).ready(function () {
+    //    $(".news-item").hover(function () {        
+    //        $(".news-item-read-more-underline").css('background-color', 'white');
+    //        $(".news-item-read-more-underline").animate({ width: ("60px") }, 200);               
+    //    }, function () {
+    //            $(".news-item-read-more-underline").animate({ width: ("0px") }, 200);
+    //        }
+    //    );
+    //});
+
+    //$(document).ready(function () {
+    //    $(".news-item").hover(function () {
+    //        $(".news-item-read-more").addClass("news-item-hovered");               
+    //        }, function () {
+    //            $(".news-item-read-more").removeClass("news-item-hovered");     
+    //        }
+    //    );
+    //});
+
 
     function matchHeight() {
         $(".news-item").matchHeight({
@@ -90,6 +100,14 @@
 
     $scope.setHeight = function () {
         matchHeight();
+    }
+
+    $scope.animateReadMore = function (newsItem) {
+        newsItem.selectedItem = true;
+    }
+
+    $scope.removeAnimateReadMore = function (newsItem) {
+        newsItem.selectedItem = false;
     }
 
     //$scope.setPager = function (rssItemList) {
