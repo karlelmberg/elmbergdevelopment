@@ -1,0 +1,16 @@
+﻿/*Item-read-more*/
+
+.item-read-more {
+    margin-top: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.item-read-more.animateReadMore {
+    cursor: pointer;
+    color: #3385ff;
+    transition: all .15s ease-out;
+    border-bottom: 3px solid black;
+    width: 58px;
+}

@@ -1,0 +1,59 @@
+﻿
+/*Social Media*/
+
+.social-icons {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    height: 35px;
+    display: block;
+}
+
+.social-icons li {
+    list-style: none;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.social-icons li a {
+    height: 35px;
+    width: 35px;
+    display: block;
+    padding: 0;
+    transition: all .15s ease-out;
+}
+
+.social-icons li a:hover {
+    transition: all .15s ease-out;
+    color: red;
+}
+
+.social-icons li a .social-icons-color {
+    color: #adb5bd;
+}
+
+.social-icons li a .social-icons-color:hover {
+    color: #99c9ff;
+    ;
+    transition: all .15s ease-out;
+}
+
+.social-icons li a.twitter:hover {
+    transition: all .15s ease-out;
+}
+
+
+
+.social-icons li a.email:hover {
+    transition: all .15s ease-out;
+}
+
+
+
+.social-icons li a.print:hover {
+    transition: all .15s ease-out;
+}
+
+.at-icon-wrapper {
+    display: none !important;
+}

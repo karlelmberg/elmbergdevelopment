@@ -297,7 +297,7 @@
     <Content Include="Static\components\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Static\css\Index.css" />
+    <Content Include="Static\css\index.css" />
     <Content Include="Static\css\Print.css" />
     <Content Include="Static\img\black_and_white_man_error_page.jpg" />
     <Content Include="Static\img\computer.jpg" />
@@ -447,6 +447,23 @@
     <Content Include="Views\RssListNewsPage\Index.cshtml" />
     <Content Include="Views\ControlPanelPage\Index.cshtml" />
     <Content Include="Views\Shared\SocialMedia.cshtml" />
+    <Content Include="Views\Shared\MobileNavigation.cshtml" />
+    <Content Include="Static\scss\partials\_header.scss" />
+    <Content Include="Static\scss\index.scss" />
+    <Content Include="Static\scss\print.scss" />
+    <Content Include="Static\scss\partials\_layout.scss" />
+    <Content Include="Static\scss\partials\_footer.scss" />
+    <Content Include="Static\scss\partials\_start-page.scss" />
+    <Content Include="Static\scss\partials\_news-page.scss" />
+    <Content Include="Static\scss\partials\_news-list-page.scss" />
+    <Content Include="Static\scss\partials\_error-page.scss" />
+    <Content Include="Static\scss\partials\_article-list-page.scss" />
+    <Content Include="Static\scss\partials\_article-page.scss" />
+    <Content Include="Static\scss\partials\_social-media.scss" />
+    <Content Include="Static\scss\partials\_control-panel.scss" />
+    <Content Include="Static\scss\partials\_item.scss" />
+    <Content Include="Static\scss\partials\_buttons.scss" />
+    <Content Include="Static\scss\partials\_mobile-menu.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

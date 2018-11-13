@@ -1,0 +1,45 @@
+﻿.error-bg {
+    background-image: url(/Static/img/black_and_white_man_error_page.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1024px;
+}
+
+.error-bg .error-inner {
+    margin: auto;
+    padding-top: 170px;
+}
+
+.error-bg .error-inner .error-text-404 {
+    font-size: 160px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.error-bg .error-inner .intro {
+    margin-top: 15px;
+}
+
+.error-bg .error-inner p,
+.error-bg .error-inner h1 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.error-bg .error-inner .error-text-links {
+    color: #99c9ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.error-bg .error-inner .error-logo {
+    width: 217px;
+    height: 54px;
+    margin-top: 120px;
+}
+
+.error-bg .error-inner .error-status {
+    margin-bottom: 50px;
+}
