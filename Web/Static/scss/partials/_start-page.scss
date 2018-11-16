@@ -1,4 +1,9 @@
-﻿.start-page .computer {
+﻿.start-page .start-page-wrapper {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.start-page .start-page-wrapper .computer {
     width: 100%;
 }
 

@@ -20,6 +20,5 @@ namespace Web.Business.ViewModelBuilders
         {
             model.TopMenu = PageFactory.GetChildrenForPage(SiteSettings.RootPage, x => x.VisibleInMenu);
         }
-
     }
 }

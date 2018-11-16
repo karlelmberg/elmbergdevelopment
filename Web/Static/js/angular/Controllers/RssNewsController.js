@@ -90,7 +90,7 @@
 
 
     function matchHeight() {
-        $(".news-item").matchHeight({
+        $('.news-item-text-container').matchHeight({
             byRow: true,
             property: 'height',
             target: null,
