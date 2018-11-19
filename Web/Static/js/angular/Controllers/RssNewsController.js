@@ -88,6 +88,13 @@
     //    );
     //});
 
+    $scope.animateReadMore = function (newsItem) {
+        newsItem.selectedItem = true;
+    }
+
+    $scope.removeAnimateReadMore = function (newsItem) {
+        newsItem.selectedItem = false;
+    }
 
     function matchHeight() {
         $('.news-item-text-container').matchHeight({
@@ -100,14 +107,6 @@
 
     $scope.setHeight = function () {
         matchHeight();
-    }
-
-    $scope.animateReadMore = function (newsItem) {
-        newsItem.selectedItem = true;
-    }
-
-    $scope.removeAnimateReadMore = function (newsItem) {
-        newsItem.selectedItem = false;
     }
 
     //$scope.setPager = function (rssItemList) {
