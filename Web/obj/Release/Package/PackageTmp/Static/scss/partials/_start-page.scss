@@ -1,0 +1,102 @@
+﻿.start-page .start-page-wrapper {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.start-page .start-page-wrapper .computer {
+    width: 100%;
+}
+
+.start-page .header-line {
+    width: 50%;
+    margin: auto;
+    border-bottom: 3px solid #99c9ff;
+}
+
+.start-page h1.start-page-header {
+    font-size: 75px;
+    color: black;
+    font-family: Oswald,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 90px;
+    padding-top: 50px;
+}
+
+.start-page .areas-of-competence {
+    border: 3px solid #99c9ff;
+    height: 450px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 80px;
+    width: 340px;
+}
+
+.start-page .areas-of-competence:hover {
+    background-color: gainsboro;
+}
+
+.start-page .areas-of-competence img.web-development {
+    width: 150px;
+    margin-top: 65px;
+    margin-left: 90px;
+}
+
+.start-page .areas-of-competence h2.areas-of-competence-header {
+    font-size: 26px;
+    color: black;
+    font-family: Oswald,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.start-page .areas-of-competence p.areas-of-competence-paragraph {
+    font-size: 20px;
+    color: black;
+    font-family: 'Source Sans Pro Lighter';
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 32px;
+    width: 75%;
+    margin: auto;
+}
+
+.start-page .background-grey {
+    background-color: #fafafa;
+    width: 100%;
+    height: 650px;
+}
+
+.start-page .background-grey .about-me {
+    background-color: #fff;
+    box-shadow: 1px 1.7px 21px 0 rgba(0,0,0,.15);
+    width: 100%;
+    font-size: 16px;
+    margin-top: 80px;
+    height: 300px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.start-page .background-grey .about-me .about-me-image {
+    margin-left: 60px;
+    margin-top: 55px;
+}
+
+.start-page .background-grey .about-me .about-me-image img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.start-page .background-grey .about-me .about-me-info {
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-top: 67px;
+}

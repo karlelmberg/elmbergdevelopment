@@ -69,6 +69,7 @@
 
     @*JQuery*@
     <script type='text/javascript' src='/static/js/jquery-3.2.1.min.js'></script>
+    <script type="text/javascript" src="/static/js/jquery.matchHeight-min.js"></script>
 
     @*HTML5 sectioning elements in legacy Internet Explorer*@
     <!--[if lt IE 9]>
@@ -79,20 +80,19 @@
 
     @*Bundles CSS*@
     @Styles.Render("~/bundles/css")
-    @*<link href="~/Static/css/print.css" media="print" rel="stylesheet" />*@
+    <link href="~/Static/css/print.css" media="print" rel="stylesheet" />
     @*@{ Html.RenderPartial("~/Views/Shared/Scripts.cshtml"); }*@
 </head>
 <body ng-app="edApp">
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLK68K3"
-            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLK68K3"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     @*@Html.FullRefreshPropertiesMetaData()*@
-    @Html.Partial("Header", Model);
+    @Html.Partial("Header", Model)
     <main class="main" role="main" id="main">
         @RenderBody()
         @Html.Partial("Footer", Model);

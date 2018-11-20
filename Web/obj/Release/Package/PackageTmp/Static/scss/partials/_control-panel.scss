@@ -1,0 +1,72 @@
+﻿/*Control Panel*/
+.control-panel-page {
+    background-color: #f4f4f4;
+}
+
+.control-panel-page .main-text {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.control-panel-page .main-text h1 {
+    margin-left: 15px;
+}
+
+.control-panel-page .control-panel-page-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.control-panel-page .control-panel-page-panel .panel-links-heading {
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container {
+    height: 300px;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container a {
+    text-decoration: none;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item {
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+    padding: 10px 10px 10px 10px;
+    -webkit-transition: box-shadow 200ms;
+    transition: box-shadow 200ms;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item:after {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item:hover:after {
+    opacity: 1;
+}
+
+.control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item .control-panel-link-item-text {
+    text-transform: uppercase;
+    color: #4d4d4d;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    font-size: 18px;
+}
+
+
+.control-panel-page .control-panel-page-panel .panel-link-container .control-panel-link-item .control-panel-link-item-image {
+}
