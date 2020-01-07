@@ -272,9 +272,8 @@ Web/License_BACKUP_14168.config
 Web/License_LOCAL_14168.config
 Web/License_REMOTE_14168.config
 Web/appSettings.config
-Web/node_modules
+Web/node_modules/
 .package-lock.json
-*.suo
 *.dll
 *.pdb
 
