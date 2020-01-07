@@ -10,22 +10,18 @@
         }
 
         .box-two-third-container {
-
-            :hover {
+            /*:hover {
                 transform: scale(1.05);
                 transition: all .1s ease-in-out;
-            }
-
+            }*/
             .box-two-third {
                 background-color: white;
                 margin-top: 15px;
                 margin-bottom: 15px;
                 min-height: 316px;
-
-                :hover {
+                /*:hover {
                     transform: none;
-                }
-
+                }*/
                 .box-two-third-text-wrapper {
                     padding: 20px;
 
@@ -72,31 +68,45 @@
         height: 260px;
         background-size: cover;
 
-        &.twoValve {
-            background-image: url('../img/2valv1.jpg');
-        }
+        &.lunch {
 
-        &.percys {
-            background-image: url('../img/percys.jpg');
-        }
+            &.twoValve {
+                background-image: url('../img/2valv1.jpg');
+            }
 
-        &.nilssons {
-            background-image: url('../img/nilssons.jpg');
-        }
+            &.percys {
+                background-image: url('../img/percys.jpg');
+            }
 
-        &.frilaget {
-            background-image: url('../img/frilaget.jpg');
+            &.nilssons {
+                background-image: url('../img/nilssons.jpg');
+            }
+
+            &.frilaget {
+                background-image: url('../img/frilaget.jpg');
+            }
         }
 
         .box-picture-text {
             background-color: #0067b8;
-            width: 159px;
-            margin-top: 210px;
-            margin-left: 66%;
-            color: white;
+            color:white;
+            height: 26px;
+            width: 174px;          
+            margin-left: 75%;          
             text-align: center;
-            font-size: 20px;
-            padding-bottom: 30px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 15px;
+            right: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .box-picture {
+
+        &.lunch {
+            display: none;
         }
     }
 }

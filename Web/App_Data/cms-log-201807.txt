@@ -1,5 +1,0 @@
-2018-07-06 13:31 [Critical] No controller is registered for pagetype of page 'Newspage 1'
-7/6/2018 2:47 PM [Critical] No controller is registered for pagetype of page 'Startsida'
-7/6/2018 2:47 PM [Critical] No controller is registered for pagetype of page 'Startsida'
-7/7/2018 11:58 AM [Critical] No controller is registered for pagetype of page 'SitePageData'
-7/7/2018 11:58 AM [Critical] No controller is registered for pagetype of page 'SitePageData'

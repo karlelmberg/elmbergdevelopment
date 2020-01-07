@@ -247,19 +247,22 @@
 
     .box-picture-text {
         background-color: #0067b8;
+        color: white;
         height: 26px;
         width: 72px;
-        margin-top: 115px;
         margin-left: 75%;
-        color: white;
         text-align: center;
         font-size: 18px;
+        position: absolute;
+        bottom: 15px;
+        right: 12px;
     }
 }
 
 .hooper {  
     height: 430px !important;
 }
+
 
 .start-page .areas-of-competence h2.areas-of-competence-header {
     font-size: 26px;
@@ -317,4 +320,14 @@
     margin-left: 80px;
     margin-right: 100px;
     margin-top: 67px;
+}
+
+@media screen and (max-width: 992px) {
+    
+    .box-two-third {
+
+        &.top-boxes {
+            display: none;
+        }
+    }
 }
