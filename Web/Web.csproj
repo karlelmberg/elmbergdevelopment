@@ -75,6 +75,9 @@
     <Reference Include="Google.Apis.PlatformServices, Version=1.35.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.35.1\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.14.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.14\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Kaliko.ImageLibrary, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageLibrary.3.0.0\lib\net45\Kaliko.ImageLibrary.dll</HintPath>
     </Reference>
@@ -120,6 +123,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.PdfGenerator, Version=1.1.15.0, Culture=neutral, PublicKeyToken=231663d50a41b451, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.PdfGenerator.1.1.15\lib\net20\NReco.PdfGenerator.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -282,11 +288,14 @@
     <Content Include="Errors\500.html" />
     <Content Include="Files\Readme.txt" />
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
     <Content Include="ImageCache\readme.txt" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="SetupAdminAccount.aspx" />
     <Content Include="sitemap.xml" />
+    <Content Include="src\index.html" />
+    <Content Include="src\main.js" />
     <Content Include="Static\components\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Static\components\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Static\components\bootstrap\css\bootstrap-reboot.css" />
@@ -297,28 +306,40 @@
     <Content Include="Static\components\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.js" />
     <Content Include="Static\components\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Static\components\prism\prism.css" />
     <Content Include="Static\css\index.css" />
     <Content Include="Static\css\Print.css" />
+    <Content Include="Static\img\aerial-photography-of-buildings.jpg" />
+    <Content Include="Static\img\architectural-design-architecture-building-business-443383.jpg" />
     <Content Include="Static\img\black_and_white_man_error_page.jpg" />
+    <Content Include="Static\img\blur-close-up-cutlery-delicious.jpg" />
     <Content Include="Static\img\computer.jpg" />
     <Content Include="Static\img\computer_modified.png" />
     <Content Include="Static\img\development.svg" />
     <Content Include="Static\img\ed.svg" />
     <Content Include="Static\img\edbest.svg" />
+    <Content Include="Static\img\edspinner.gif" />
     <Content Include="Static\img\ed_icon_best.svg" />
     <Content Include="Static\img\ga_analytics.png" />
     <Content Include="Static\img\ga_analytics_small.png" />
     <Content Include="Static\img\google.png" />
     <Content Include="Static\img\google_analytics.png" />
     <Content Include="Static\img\google_tag _manager.jpg" />
+    <Content Include="Static\img\icons8-settings-filled-black.svg" />
+    <Content Include="Static\img\icons8-settings-filled.svg" />
     <Content Include="Static\img\kalle.jpg" />
     <Content Include="Static\img\kalle_falsterbo.png" />
     <Content Include="Static\img\logga.jpg" />
+    <Content Include="Static\img\man-wakeboarding-over-body-of-water.jpg" />
     <Content Include="Static\img\microsoft.png" />
+    <Content Include="Static\img\person-holding-white-and-blue-business-paper.jpg" />
+    <Content Include="Static\img\person-reading-magazine.jpg" />
     <Content Include="Static\img\programming.svg" />
     <Content Include="Static\img\responsive.svg" />
     <Content Include="Static\img\signature.png" />
+    <Content Include="Static\img\spinner.gif" />
     <Content Include="Static\img\test_ico.png" />
+    <Content Include="Static\img\wall-buildings.jpg" />
     <Content Include="Static\img\web-design.svg" />
     <Content Include="Static\img\web-development.svg" />
     <Content Include="Static\js\angular\app.js" />
@@ -330,10 +351,16 @@
     <Content Include="Static\js\components\angular\angular-route.js" />
     <Content Include="Static\js\components\angular\angular.js" />
     <Content Include="Static\js\components\angular\angular.min.js" />
+    <Content Include="Static\js\components\prism\prism.js" />
     <Content Include="Static\js\jquery-3.2.1.min.js" />
     <Content Include="Static\js\jquery.matchHeight-min.js" />
     <Content Include="Static\js\site.js" />
+    <Content Include="Static\js\vue\Pages\ArticleListPage.js" />
+    <Content Include="Static\js\vue\Pages\LunchPage.js" />
+    <Content Include="Static\js\vue\Pages\SportPage.js" />
+    <Content Include="Static\js\vue\Pages\StartPage.js" />
     <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -343,16 +370,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Business\Extensions\PageExtensions.cs" />
     <Compile Include="Business\Services\AppFlowMetadata .cs" />
+    <Compile Include="Business\Services\HtmlToPdfService.cs" />
     <Compile Include="Business\ViewModelBuilders\PageViewModelBuilder.cs" />
     <Compile Include="Business\ViewModelBuilders\StartPageViewModelBuilder.cs" />
+    <Compile Include="Business\Vue\VueData.cs" />
+    <Compile Include="Business\Vue\VueParser.cs" />
     <Compile Include="Controllers\Pages\ArticleListPageController.cs" />
     <Compile Include="Controllers\Pages\ArticlePageController.cs" />
     <Compile Include="Controllers\Pages\ControlPanelPageController.cs" />
     <Compile Include="Controllers\Pages\GoogleFotosPageController.cs" />
+    <Compile Include="Controllers\Pages\LunchPageController.cs" />
     <Compile Include="Controllers\Pages\RssListNewsPageController.cs" />
     <Compile Include="Controllers\Pages\RssNewsPageController.cs" />
     <Compile Include="Controllers\Pages\SitePageDataController.cs" />
     <Compile Include="Controllers\Pages\StandardPageController.cs" />
+    <Compile Include="Controllers\Pages\SportPageController.cs" />
     <Compile Include="Controllers\Pages\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -375,16 +407,25 @@
     <Compile Include="Models\Pages\ArticlePage.cs" />
     <Compile Include="Models\Pages\ControlPanelLinkPage.cs" />
     <Compile Include="Models\Pages\ControlPanelPage.cs" />
+    <Compile Include="Models\Pages\LunchPage.cs" />
     <Compile Include="Models\Pages\RssListNewsPage.cs" />
     <Compile Include="Models\Pages\RssNewsPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
+    <Compile Include="Models\Pages\SportPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\ViewModels\ArticleListPageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\LunchPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
+    <Compile Include="Models\ViewModels\RestaurantViewModel.cs" />
+    <Compile Include="Models\ViewModels\ResultViewModel.cs" />
+    <Compile Include="Models\ViewModels\SportPageViewModel.cs" />
     <Compile Include="Models\ViewModels\StartPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Content Include="Static\js\vue\components\FacebookFlowComponent.vue" />
+    <None Include="Static\js\vue\components\LunchComponent.vue" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -421,6 +462,9 @@
     <Content Include="Admin\Assets\fonts\hind\hind-bold-webfont.woff" />
     <Content Include="Admin\Assets\fonts\hind\hind-bold-webfont.ttf" />
     <Content Include="Admin\Assets\fonts\hind\hind-bold-webfont.eot" />
+    <Content Include="package-lock.json" />
+    <None Include=".babelrcxx" />
+    <Content Include="package.json" />
     <None Include="packages.config" />
     <Content Include="Views\ArticlePage\Index.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
@@ -464,6 +508,16 @@
     <Content Include="Static\scss\partials\_item.scss" />
     <Content Include="Static\scss\partials\_buttons.scss" />
     <Content Include="Static\scss\partials\_mobile-menu.scss" />
+    <Content Include="Views\SportPage\Index.cshtml" />
+    <Content Include="Static\scss\partials\_sport-page.scss" />
+    <Content Include="Views\LunchPage\Index.cshtml" />
+    <Content Include="Static\scss\partials\_lunch-page.scss" />
+    <Content Include="SassCompile.bat" />
+    <Content Include="Static\js\vue\components\Standings.vue" />
+    <Content Include="Views\Shared\BrowserCheck.cshtml" />
+    <Content Include="src\App.vue" />
+    <Content Include="src\Components\Lunch.vue" />
+    <Content Include="Views\test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

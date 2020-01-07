@@ -5,6 +5,7 @@ using System.Web;
 using KalikoCMS.Attributes;
 using KalikoCMS.Core;
 using KalikoCMS.PropertyType;
+using Web.Models.ViewModels;
 
 namespace Web.Models.Pages
 {
@@ -23,7 +24,8 @@ namespace Web.Models.Pages
         [Property("Main body")]
         public virtual HtmlProperty MainBody { get; set; }
 
-        public List<ArticlePage> ArticlePageList { get; set; }
+        //public List<ArticlePage> ArticlePageList { get; set; }
 
+        public ArticleListPageViewModel ArticleListPageViewModel { get; set; }
     }
 }

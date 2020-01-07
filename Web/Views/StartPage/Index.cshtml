@@ -1,48 +1,225 @@
 ﻿@model Web.Models.ViewModels.StartPageViewModel
 
 <div class="start-page">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">           
-            <div class="start-page-wrapper">
-                <img src="/Static/img/computer_modified.png" class="computer">
+    <div class="container top-space-to-boxes">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="box-two-third top-boxes">
+                    <template>
+                        <hooper :progress="true" :itemsToShow="3" :auto-play="false" :playSpeed="1000000000" >
+                            <slide>
+                                <div class="box-picture slider buildings">
+                                    <div class="box-picture-text-long">
+                                        Agile development for all corporations
+                                    </div>
+                                </div>                             
+                            </slide>
+                            <slide>
+                                <div class="box-picture slider temperature">
+                                    <div class="box-picture-text-long">
+                                        Se the latest weather and temperatures
+                                    </div>
+                                </div>   
+                            </slide>
+                            <slide>
+                                <div class="box-picture slider sport">
+                                    <div class="box-picture-text-long">
+                                       Watch latest sport results
+                                    </div>
+                                </div>
+                            </slide>
+                            <slide>
+                                <div class="box-picture slider articles">
+                                    <div class="box-picture-text-long">
+                                        Read the latest articles in the development field
+                                    </div>
+                                </div>   
+                            </slide>
+                            <slide>
+                                <div class="box-picture slider news">
+                                    <div class="box-picture-text-long">
+                                        Se the latest tech news
+                                    </div>
+                                </div>   
+                            </slide>                        
+                            <hooper-navigation slot="hooper-addons"></hooper-navigation>
+                        </hooper>
+                    </template>
+                    @*<a target="_self" href="/">
+                            <div class="box-picture slider">
+                                <div class="box-picture-text-long">
+                                    Agile development for all corporations
+                                </div>
+                            </div>
+                        </a>*@
+                </div>
             </div>
-            <h1 class="start-page-header">Areas of competence</h1>
-            <div class="header-line"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="areas-of-competence">
-                            <img src="~/Static/img/web-development.svg" class="web-development"/>
-                            <h2 class="areas-of-competence-header">Episerver development</h2>
-                            <p class=" areas-of-competence-paragraph">
-                                I develop sites for multinational corporations.
-                                Work is divied in to design, development and Deployment.
-                            </p>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                @*<a target="_self" href="/Lunch">*@
+                <div class="box-one-third-high-container">
+                    <div class="box-one-third-high top-boxes lunch">
+                        <div class="lunch-inner-box">
+                            <div class="lunch-inner-box-header">{{selectedRestaurant.LunchHeader}}</div>
+                            <table>
+                                <tr>
+                                    <td v-html=selectedRestaurant.FirstDish></td>
+                                </tr>
+                                <tr>
+                                    <td v-html=selectedRestaurant.SecondDish></td>
+                                </tr>
+                                <tr>
+                                    <td v-html=selectedRestaurant.VegitarianDish></td>
+                                </tr>
+                            </table>
+                            <div class="lunch-inner-box-link-container">
+                                <div class="lunch-inner-box-link" data-toggle="tooltip" title="Go to next restaurant" v-on:click="getNextRestaurant()">
+                                    Next restaurant ->
+                                </div>
+                                <a target="_self" href="/Lunch" class="lunch-inner-box-link" data-toggle="tooltip" title="Go to restaurant page">
+                                    Restaurant page ->
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="areas-of-competence">
-                            <img src="~/Static/img/responsive.svg" class="web-development"/>
-                            <h2 class="areas-of-competence-header">Web design</h2>
-                            <p class=" areas-of-competence-paragraph">
-                                I design pages using the latest development-tools and pages are 100% responsive, working on computer, tablat and Phone.
-                            </p>
+                </div>
+                @*</a>*@
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <a target="_self" href="/">
+                    <div class="box-one-third-container">
+                        <div class="box-one-third">
+                            <div class="box-picture sport">
+                                <div class="box-picture-text">
+                                    Sport
+                                </div>
+                            </div>
+                            <div class="box-one-third-text-wrapper">
+                                <div class="box-one-third-header">View the latest Sport news</div>
+                                <p>
+                                    View the latest sport events, fixtures and league tables
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="areas-of-competence">
-                            <img src="~/Static/img/development.svg" class="web-development"/>
-                            <h2 class="areas-of-competence-header">Responsibility</h2>
-                            <p class=" areas-of-competence-paragraph">
-                                I take responsibilty from the from the first skretch to roll-out of complete solution.
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <a target="_self" href="/">
+                    <div class="box-one-third-container">
+                        <div class="box-one-third">
+                            <div class="box-picture articles">
+                                <div class="box-picture-text">
+                                    Articles
+                                </div>
+                            </div>
+                            <div class="box-one-third-text-wrapper">
+                                <div class="box-one-third-header">Top development articles</div>
+                                <p>
+                                    Get hold of top development articles including EpiServer, Vue..
+                                    View the latest sport events, fixtures and league tables
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="box-one-third-container">
+                    <div class="box-one-third">
+                        <a target="_self" href="/">
+                            <div class="box-picture news">
+                                <div class="box-picture-text">
+                                    News
+                                </div>
+                            </div>
+                        </a>
+                        <div class="box-one-third-text-wrapper">
+                            <div class="box-one-third-header">See the latest development news</div>
+                            <p>
+                                View the latest development news on the market.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="box-full areas-of-competence-wrapper">
+            <div class="areas-of-competence-filter">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h1 class="start-page-header">Areas of competence</h1>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="inner-box-full">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="areas-of-competence">
+                                    <img src="~/Static/img/web-development.svg" class="web-development" />
+                                    <h2 class="areas-of-competence-header">Episerver development</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="areas-of-competence">
+                                    <img src="~/Static/img/responsive.svg" class="web-development" />
+                                    <h2 class="areas-of-competence-header">Web design</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="areas-of-competence">
+                                    <img src="~/Static/img/development.svg" class="web-development" />
+                                    <h2 class="areas-of-competence-header">Responsibility</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="box-one-third">
+                    <div class="box-header">
+                        <H4 class="box-header-text text-center">Sport</H4>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="box-one-third">
+                    <div class="box-header">
+                        <H4 class="box-header-text text-center">Articles</H4>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="box-one-third">
+                    <div class="box-header">
+                        <H4 class="box-header-text text-center">News</H4>
+                    </div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
+</div>
+
+@section scripts {
+    <script src="~/dist/startpage.bundle.js"></script>
+}
+
+
+
+
+
+
+
+@*<div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="background-grey">
                 <h1 class="start-page-header">About me</h1>
@@ -52,8 +229,8 @@
                         <div class="col-md-12">
                             <div class="about-me">
                                 <div class="about-me-image">
-                                    @*<img src="~/Static/img/kalle.jpg">*@
-                                    <img src="~/Static/img/kalle_falsterbo.png"/>
+
+                                    <img src="~/Static/img/kalle_falsterbo.png" />
                                 </div>
                                 <div class="about-me-info">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae feugiat sapien, a sodales tortor.
@@ -69,29 +246,4 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    @*<div class="contactPerson">
-        <div class="contactPerson__imageHolder"> <img class="contactPerson__image" src="https://www.infozone.se/wp-content/uploads/2017/12/hampus.jpg" alt="">
-            </div>
-        <div class="contactPerson__info">
-            <div class="contactPerson__infoInner">
-                <h3 class="contactPerson__name">Hampus Carnemark</h3>
-                <p class="contactPerson__title">VD</p>
-                <p class="contactPerson__contactRow"> <a class="contactPerson__contactInfo contactPerson__mail" href="mailto:hampus.carnemark@infozone.se">Skicka e-post</a></p><
-                /div>
-            </div>
-        </div>
     </div>*@
-
-
-
-    @*<div>@Model.CurrentPage.Ingress</div>
-        <div>
-            @if (!string.IsNullOrEmpty(Model.CurrentPage.Image.ImageUrl))
-        {
-                @Model.CurrentPage.Image.ToHtml()
-            }
-        </div>
-        <div>@Model.CurrentPage.MainBody</div>*@
-</div>

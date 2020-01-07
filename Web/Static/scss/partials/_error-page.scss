@@ -1,4 +1,6 @@
-﻿.error-bg {
+﻿@import './static/scss/partials/_layout.scss';
+
+.error-bg {
     background-image: url(/Static/img/black_and_white_man_error_page.jpg);
     background-position: center center;
     background-repeat: no-repeat;

@@ -9,10 +9,11 @@ namespace Web.Models.ViewModels
         public StartPageViewModel(StartPage currentPage)
         {
             CurrentPage = currentPage;
+            MainMenu = new List<CmsPage>();        
         }
 
         public StartPage CurrentPage { get; private set; }
-        public IEnumerable<CmsPage> TopMenu { get; set; }
+        public IEnumerable<CmsPage> MainMenu { get; set; }
         //public IEnumerable<CmsPage> LatestNews { get; set; }
     }
 }

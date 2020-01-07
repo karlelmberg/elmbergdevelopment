@@ -18,7 +18,7 @@ namespace Web.Business.ViewModelBuilders
 
         public static void SetBaseProperties(IPageViewModel<CmsPage> model)
         {
-            model.TopMenu = PageFactory.GetChildrenForPage(SiteSettings.RootPage, x => x.VisibleInMenu);
+            model.MainMenu = PageFactory.GetChildrenForPage(SiteSettings.RootPage, x => x.VisibleInMenu);         
         }
     }
 }

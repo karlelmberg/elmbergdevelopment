@@ -1,7 +1,69 @@
-﻿.main {
+﻿/*.main {
     margin-top: 190px;
-}
+}*/
 
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+}
+
+/*MIXIN*/
+
+/*Used for icons in menu, footer...*/
+@mixin iconcolorred {
+    color: #d3132b;
+}
+
+/*Used for hoovering icons in menu, footer...*/
+@mixin iconandlinkhoovercolorred {
+    color: #d3132b;
+}
+
+/*Used for hoovering icons in menu, footer...*/
+@mixin iconandlinkhoovercolorwhite { 
+    color: white; 
+}
+
+@mixin menucolorred {
+    background-color: deepskyblue;
+}
+
+/*END MIXIN*/
+
+.spinner-background {
+    background-color: black;
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+
+    .edspinner {
+        background-image: url('/Static/img/edspinner.gif');
+        width: 64px;
+        height: 64px;
+        display: none;
+        left: 50%;
+        margin-top: 330px;
+        position: absolute;
+        z-index: 2000;
+        display: none;
+    }
+}
+
+.hide-vue {
+    display: none;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none !important;
+    color:black !important;
+}
+
+@media screen and (max-width: 667px) {
+    .spinner-background {
+        .edspinner {
+            left: 40%;
+            margin-top: 260px;
+        }
+    }
 }

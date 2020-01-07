@@ -11,10 +11,10 @@ namespace Web.Models.ViewModels
         public PageViewModel(T currentPage)
         {
             CurrentPage = currentPage;
-            TopMenu = new List<CmsPage>();
+            MainMenu = new List<CmsPage>();         
         }
 
         public T CurrentPage { get; private set; }
-        public IEnumerable<CmsPage> TopMenu { get; set; }
+        public IEnumerable<CmsPage> MainMenu { get; set; }     
     }
 }

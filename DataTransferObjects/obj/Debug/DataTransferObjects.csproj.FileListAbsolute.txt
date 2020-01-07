@@ -4,3 +4,9 @@ C:\Visual Studio\elmbergdevelopment\DataTransferObjects\obj\Debug\DataTransferOb
 C:\Visual Studio\elmbergdevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.dll
 C:\Visual Studio\elmbergdevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.pdb
 C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.csprojResolveAssemblyReference.cache
+C:\Projects\ElmbergDevelopment\DataTransferObjects\bin\Debug\DataTransferObjects.dll
+C:\Projects\ElmbergDevelopment\DataTransferObjects\bin\Debug\DataTransferObjects.pdb
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.csproj.CoreCompileInputs.cache
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.dll
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.pdb
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Debug\DataTransferObjects.csprojAssemblyReference.cache

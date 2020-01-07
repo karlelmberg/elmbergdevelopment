@@ -1,50 +1,83 @@
-﻿
+﻿@import './static/scss/partials/_layout.scss';
+
+a {
+    &.email {
+        color: white;
+    }
+}
+
 .footer {
     background-color: black;
     height: 500px;
     margin-top: 60px;
+
+    .footer-heading {
+        color: white;
+        font-size: 20px;
+        padding-top: 100px;
+    }
+
+    .footer-contact {
+        font-size: 18px;
+        color: white;
+        margin-top: 25px;
+        text-decoration: none !important;
+        text-underline: none !important;
+    }
+
+    .footer-social-icons {
+        margin-top: 40px;
+    }
+
+    ul {
+        &.footer-menu {
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 60px;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                text-decoration: none;
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: Oswald,sans-serif;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        @include iconandlinkhoovercolorred;
+                        /*color: #da1b60;*/
+                    }
+                }
+            }
+        }
+    }
 }
 
-.footer .footer-heading {
-    color: white;
-    font-size: 20px;
-    padding-top: 100px;
-}
+@media screen and (max-width: 667px) {
+    .footer {
+        height: 630px;
 
-.footer .footer-contact {
-    font-size: 18px;
-    color: white;
-    margin-top: 25px;
-    text-decoration: none !important;
-    text-underline: none !important;
-}
+        .footer-heading {
+            color: white;
+            font-size: 20px;
+            padding-top: 40px;
+            text-align: center;
+        }
 
+        .footer-contact {
+            text-align: center;
+        }
 
-.footer .footer-social-icons {
-    margin-top: 40px;
-}
-
-.footer ul.footer-menu {
-    font-size: 18px;
-    margin-top: 25px;
-    margin-bottom: 60px;
-    padding: 0;
-}
-
-.footer ul.footer-menu li {
-    margin-bottom: 10px;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.footer ul.footer-menu li a {
-    text-decoration: none;
-    color: white;
-    font-family: Oswald,sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.footer ul.footer-menu li a:hover {
-    color: #99c9ff;
+        ul {
+            &.footer-menu {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

@@ -6,19 +6,19 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="footer-heading">Sitemap</div>
                 <ul class="footer-menu">
-                    @foreach (var page in Model.TopMenu)
+                    @foreach (var page in Model.MainMenu)
                     {
                         <li>
                             <a href="@page.PageUrl" title="@page.PageName">@page.PageName</a>
                         </li>
-                    }         
+                    }
                     @*<li><a target="_self" href="#">Artiklar</a></li>
-                    <li><a target="_self" href="#">Foton</a></li>
-                    <li><a target="_self" href="#">Nyheter</a></li>
-                    <li><a target="_self" href="#">Sidor</a></li>
-                    <li><a target="_self" href="#">Gadgets</a></li>
-                    <li><a target="_self" href="#">Diverse</a></li>*@
-                   
+                        <li><a target="_self" href="#">Foton</a></li>
+                        <li><a target="_self" href="#">Nyheter</a></li>
+                        <li><a target="_self" href="#">Sidor</a></li>
+                        <li><a target="_self" href="#">Gadgets</a></li>
+                        <li><a target="_self" href="#">Diverse</a></li>*@
+
                 </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
@@ -26,44 +26,47 @@
                 <div class="footer-contact">
                     Elmberg development<br />
                     Kungsgatan 38b, 211 49 Malmö<br />
-                    <a href="mailto:kalle.elmberg@gmail.com">kalle.elmberg@gmail.com</a>
+                    <a class="email"
+                       href="mailto:kalle.elmberg@gmail.com">
+                        kalle.elmberg@gmail.com
+                    </a>
                 </div>
                 <div class="footer-social-icons">
                     @{Html.RenderPartial("SocialMedia", Model);}
                 </div>
 
                 @*<ul class="footer-social">
-                    <li><a href="https://www.facebook.com/kalle.elmberg" class="facebook" title="Facebook" target="_blank"></a></li>
-                    <li><a href="https://www.youtube.com/user/strfilm" class="youtube" title="Youtube" target="_blank"></a></li>
-                    <li><a href="https://www.linkedin.com/in/karlelmberg/" class="linkedin" title="LinekdIn" target="_blank"></a></li>
-                </ul>*@
+                        <li><a href="https://www.facebook.com/kalle.elmberg" class="facebook" title="Facebook" target="_blank"></a></li>
+                        <li><a href="https://www.youtube.com/user/strfilm" class="youtube" title="Youtube" target="_blank"></a></li>
+                        <li><a href="https://www.linkedin.com/in/karlelmberg/" class="linkedin" title="LinekdIn" target="_blank"></a></li>
+                    </ul>*@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="footer-heading">Mina sidor</div>
                 @*@if (Model.Layout.LoggedIn)
-                {
-                    <ul class="footer-menu">
-                        <li><a href="/min-sida/matrikel/">Matrikel</a></li>
-                        <li><a href="/min-sida/blanketter/">Blanketter</a></li>
-                        <li><a href="/min-sida/medlemsformaner/">Medlemsförmåner</a></li>
-                        <li><a href="/min-sida/mina-installningar/">Mina inställningar</a></li>
-                        <li><a href="/globalassets/startsidan/teamviewerqs_sv.exe/">Fjärrsupport</a></li>
-                        <li><a href="/helpdesk">Fjärrsupport</a></li>
-                    </ul>
-                    <ul class="footer-menu">
-                        <li><a href="/Logout/logout">Logga ut</a></li>
-                    </ul>
-                }*@
-                @*else
-                {
-                    if (!Model.Layout.IsInReadonlyMode)
                     {
-                        <a class="btn btn-default" href="@Model.Layout.LoginUrl" title="@Html.Translate("/footer/login")">@Html.Translate("/footer/login")</a><br /><br />
                         <ul class="footer-menu">
+                            <li><a href="/min-sida/matrikel/">Matrikel</a></li>
+                            <li><a href="/min-sida/blanketter/">Blanketter</a></li>
+                            <li><a href="/min-sida/medlemsformaner/">Medlemsförmåner</a></li>
+                            <li><a href="/min-sida/mina-installningar/">Mina inställningar</a></li>
+                            <li><a href="/globalassets/startsidan/teamviewerqs_sv.exe/">Fjärrsupport</a></li>
                             <li><a href="/helpdesk">Fjärrsupport</a></li>
                         </ul>
-                    }
-                }*@
+                        <ul class="footer-menu">
+                            <li><a href="/Logout/logout">Logga ut</a></li>
+                        </ul>
+                    }*@
+                @*else
+                    {
+                        if (!Model.Layout.IsInReadonlyMode)
+                        {
+                            <a class="btn btn-default" href="@Model.Layout.LoginUrl" title="@Html.Translate("/footer/login")">@Html.Translate("/footer/login")</a><br /><br />
+                            <ul class="footer-menu">
+                                <li><a href="/helpdesk">Fjärrsupport</a></li>
+                            </ul>
+                        }
+                    }*@
             </div>
         </div>
     </div>

@@ -12,18 +12,30 @@ namespace Web
             //    "~/Scripts/Lib/jquery/jquery-ui-{version}.js")
             //);
 
-            bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                    "~/Static/js/components/angular/angular.js"
-                ).IncludeDirectory("~/Static/js/angular", "*.js", true)
+            bundles.Add(new ScriptBundle("~/bundles/js")
+                //.IncludeDirectory("~/Static/js/vue", "*.js", true)
+                .IncludeDirectory("~/Static/js/components/prism", "*.js", true)
             );
+
+            //bundles.Add(new ScriptBundle("~/bundles/js").Include(
+            //        "~/Static/js/components/angular/angular.js"
+            //    ).IncludeDirectory("~/Static/js/angular", "*.js", true)
+            //    //.IncludeDirectory("~/Static/js/vue", "*.js", true)
+            //    .IncludeDirectory("~/Static/js/components/prism", "*.js", true)
+            //);
+
+            //bundles.Add(new ScriptBundle("~/bundles/js").IncludeDirectory("~/Static/js/vue", "*.js", true));
+
+            //bundles.Add(new ScriptBundle("~/bundles/js").IncludeDirectory("~/Static/js/components/prism", "*.js", true));
 
             bundles.Add(new StyleBundle("~/bundles/css")
                 //.Include("~/Static/css/bootstrap.css", new CssRewriteUrlTransform())
                 //.Include("~/Static/css/bootstrap-responsive.css")
                 //.Include("~/Static/css/media.css")
                 //.Include("~/Static/css/style.css", new CssRewriteUrlTransform())
-                //.Include("~/Static/css/editmode.css")            
-                .Include("~/Static/css/index.css"));
+                .Include("~/Static/components/prism/prism.css")            
+                .Include("~/Static/css/index.css")
+            );
         }
     }
 }

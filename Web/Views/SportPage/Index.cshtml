@@ -1,0 +1,182 @@
+﻿@model Web.Models.ViewModels.PageViewModel<Web.Models.Pages.SportPage>
+
+
+<div class="sport hide-sport">
+    <div class="sport-menu" v-if="sportMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: footballBtn }" v-on:click="chooseSport('football')">
+                    Fotboll
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: bandyBtn }" v-on:click="chooseSport('bandy')">
+                    Bandy
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sport-menu" v-if="footballLeagueMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: premierLeagueBtn }" v-on:click="chooseLeague('premierLeague')">
+                    Premier leauge
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: allsvenskanBtn }" v-on:click="chooseLeague('allsvenskan')">
+                    Allsvenskan
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: laLigaBtn }" v-on:click="chooseLeague('laLiga')">
+                    Laliga
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: bundesLigaBtn }" v-on:click="chooseLeague('bundesLiga')">
+                    Bundesliga
+                </div>
+                <div class="sport-button back-button" v-bind:class="{activeBtn: bundesLigaBtn }" v-on:click="initSportMenu()">
+                    < Tillbaka till Sport
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sport-menu" v-if="premierFootballLeagueTypeMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueNewsBtn }" v-on:click="chooseLeagueType('news', 'premierLeague')">
+                    Nyheter
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueTableBtn }" v-on:click="chooseLeagueType('table', 'premierLeague')">
+                    Tabeller
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueMatchesBtn }" v-on:click="chooseLeagueType('matches', 'premierLeague')">
+                    Matcher
+                </div>
+                <div class="sport-button back-button" v-bind:class="{activeBtn: footballBtn }" v-on:click="chooseSport('football')">
+                    < Tillbaka till Liga
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sport-menu" v-if="allsvenskanFootballLeagueTypeMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueNewsBtn }" v-on:click="chooseLeagueType('news', 'allsvenskan')">
+                    Nyheter
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueTableBtn }" v-on:click="chooseLeagueType('table', 'allsvenskan')">
+                    Tabeller
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueMatchesBtn }" v-on:click="chooseLeagueType('matches', 'allsvenskan')">
+                    Matcher
+                </div>
+                <div class="sport-button back-button" v-bind:class="{activeBtn: footballBtn }" v-on:click="chooseSport('football')">
+                    < Tillbaka till Liga
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sport-menu" v-if="bundesLigaFootballLeagueTypeMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueNewsBtn }" v-on:click="chooseLeagueType('news', 'bundesLiga')">
+                    Nyheter
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueTableBtn }" v-on:click="chooseLeagueType('table', 'bundesLiga')">
+                    Tabeller
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueMatchesBtn }" v-on:click="chooseLeagueType('matches', 'bundesLiga')">
+                    Matcher
+                </div>
+                <div class="sport-button back-button" v-bind:class="{activeBtn: footballBtn }" v-on:click="chooseSport('football')">
+                    < Tillbaka till Liga
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sport-menu" v-if="laLigaFootballLeagueTypeMenu">
+        <div class="container">
+            <div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueNewsBtn }" v-on:click="chooseLeagueType('news', 'laLiga')">
+                    Nyheter
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueTableBtn }" v-on:click="chooseLeagueType('table', 'laLiga')">
+                    Tabeller
+                </div>
+                <div class="sport-button" v-bind:class="{activeBtn: leagueMatchesBtn }" v-on:click="chooseLeagueType('matches', 'laLiga')">
+                    Matcher
+                </div>
+                <div class="sport-button back-button" v-bind:class="{activeBtn: footballBtn }" v-on:click="chooseSport('football')">
+                    < Tillbaka till Liga
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    @*<standings-component></standings-component>*@
+
+    <div class="standings">
+        <div class="container standings-table hide-vue">
+            <div v-if="premierLeaguePanel">
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=premierLeagueTable></p>
+                    </div>
+                </div>
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=premierLeagueBestGoalScorersTable></p>
+                    </div>
+                </div>
+            </div>
+            <div v-if="allsvenskanPanel">
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=allsvenskanTable></p>
+                    </div>
+                </div>
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=allsvenskanBestGoalScorersTable></p>
+                    </div>
+                </div>
+            </div>
+            <div v-if="laLigaPanel">
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=laLigaTable></p>
+                    </div>
+                </div>
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=laLigaBestGoalScorersTable></p>
+                    </div>
+                </div>
+            </div>
+            <div v-if="bundesLigaPanel">
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=bundesLigaTable></p>
+                    </div>
+                </div>
+                <div class="row standings-inner-table">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p v-html=bundesLigaBestGoalScorersTable></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="football-news" v-if="footballNewsPanel">
+        <div class="container hide-vue">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <p v-html=footballNews></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts {
+    <script src="~/Static/js/vue/Pages/SportPage.js"></script>
+    <script src="~/Static/js/vue/Components/Standings.vue"></script>
+}
+

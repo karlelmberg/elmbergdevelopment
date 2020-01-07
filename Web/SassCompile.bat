@@ -1,2 +1,2 @@
 cd /d %~dp0
-start cmd.exe /k gulp watch-sass
+start cmd.exe /k gulp watch

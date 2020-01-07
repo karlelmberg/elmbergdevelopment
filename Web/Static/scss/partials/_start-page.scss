@@ -1,51 +1,269 @@
-﻿.start-page .start-page-wrapper {
-    max-height: 500px;
+﻿@import './static/scss/partials/_layout.scss';
+
+.start-page {
+    background-color: rgb(235,236,236);
+
+    .container {
+
+        &.top-space-to-boxes {
+            margin-top: 116px;
+        }
+
+        .box-full {
+            background-color: white;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            position: relative;
+            overflow: hidden;
+
+            &.areas-of-competence-wrapper {
+                background-image: url('../img/architectural-design-architecture-building-business-443383.jpg');
+                height: 444px;
+                width: 100%;
+
+                .areas-of-competence-filter {
+                    background: rgba(0, 0, 0, 0.6);
+                }
+            }
+
+            h1.start-page-header {
+                font-size: 36px;
+                color: white;
+                font-family: Oswald,sans-serif;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 0px;
+                padding-top: 42px;
+            }
+
+            .header-line {
+                width: 50%;
+                margin: auto;
+                border-bottom: 3px solid #99c9ff;
+            }
+
+            .inner-box-full {
+                margin-top: 45px;
+                margin-left: 17%;
+                margin-right: 17%;
+                margin-bottom: 45px;
+
+                .areas-of-competence {
+                    border: 3px solid #99c9ff;
+                    padding: 25px;
+                    min-height: 260px;
+
+                    img {
+
+                        &.web-development {
+                            width: 100px;
+                            margin-left: 22%;
+                            margin-right: 22%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .box-two-third {
+            background-color: white;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            min-height: 430px;
+            position: relative;
+            overflow: hidden;
+
+            .box-picture {
+                position: relative;
+                overflow: hidden;
+                height: 430px;
+                background-size: cover;
+
+                &.slider {
+
+                    &.buildings {
+                        background-image: url('../img/architectural-design-architecture-blue-sky-buildings-373584.jpg');
+                    }
+
+                    &.temperature {
+                        background-image: url('../img/close-up-photography-of-snowflake-813872.jpg');
+                    }
+
+                    &.sport {
+                        background-image: url('../img/multicolored-soccer-ball-on-green-field-47730.jpg');
+                    }
+
+                    &.articles {
+                        background-image: url('../img/photo-of-person-reading-1928151.jpg');
+                    }
+
+                    &.news {
+                        background-image: url('../img/advertisements-batch-blur-business-518543.jpg');
+                    }
+                }
+
+                .box-picture-text-long {
+                    height: 31px;
+                    width: 600px;
+                    margin-top: 370px;
+                    margin-left: 3%;
+                    color: white;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .box-one-third-container {
+
+            :hover {
+                transform: scale(1.05);
+                transition: all .1s ease-in-out;
+            }
+
+            .box-one-third {
+                background-color: white;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                min-height: 316px;
+
+                :hover {
+                    transform: none;
+                }
+
+                .box-one-third-text-wrapper {
+                    padding: 20px;
+
+                    .box-one-third-header {
+                        font-weight: 600;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .box-one-third-high-container {
+            /*:hover {
+                transform: scale(1.05);
+                transition: all .2s ease-in-out;
+            }*/
+            .box-one-third-high {
+                background-color: white;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                min-height: 390px;
+                /*:hover {
+                    transform: none;
+                }*/
+                .img-modified {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-height: 100%;
+                    min-width: 100%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &.lunch {
+                    background-image: url('../img/blur-close-up-cutlery-delicious.jpg');
+                    height: 430px;
+
+                    .lunch-inner-box {
+                        background: rgba(0, 0, 0, 0.8);
+                        height: 330px;
+                        width: 85%;
+                        color: white;
+                        margin-left: 8%;
+                        padding: 20px;
+                        position:relative;
+
+                        .lunch-inner-box-header {
+                            margin-bottom: 20px;
+                            font-size: 22px;
+                        }
+
+                        .lunch-inner-box-link-container {                       
+                            float: right;
+                            cursor: pointer;
+                            position:absolute;
+                            bottom:20px;
+                            right:15px;
+
+                            .lunch-inner-box-link {
+                                color: white !important;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        tr {
+                            td {
+                                padding-bottom: 15px;
+                            }
+                        }
+
+                        .price-container {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-boxes {
+    margin-top: 30px !important;
+}
+
+.box-header {
+    height: 40px;
+    background-color: #0067b8;
+
+    .box-header-text {
+        padding: 10px;
+        color: white;
+    }
+}
+
+.box-picture {
+    position: relative;
     overflow: hidden;
+    height: 150px;
+    background-size: cover;
+
+    &.sport {
+        background-image: url('../img/man-wakeboarding-over-body-of-water.jpg');
+    }
+
+    &.news {
+        background-image: url('../img/person-holding-white-and-blue-business-paper.jpg');
+    }
+
+    &.articles {
+        background-image: url('../img/person-reading-magazine.jpg');
+    }
+
+    .box-picture-text {
+        background-color: #0067b8;
+        height: 26px;
+        width: 72px;
+        margin-top: 115px;
+        margin-left: 75%;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+    }
 }
 
-.start-page .start-page-wrapper .computer {
-    width: 100%;
-}
-
-.start-page .header-line {
-    width: 50%;
-    margin: auto;
-    border-bottom: 3px solid #99c9ff;
-}
-
-.start-page h1.start-page-header {
-    font-size: 75px;
-    color: black;
-    font-family: Oswald,sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 90px;
-    padding-top: 50px;
-}
-
-.start-page .areas-of-competence {
-    border: 3px solid #99c9ff;
-    height: 450px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 80px;
-    width: 340px;
-}
-
-.start-page .areas-of-competence:hover {
-    background-color: gainsboro;
-}
-
-.start-page .areas-of-competence img.web-development {
-    width: 150px;
-    margin-top: 65px;
-    margin-left: 90px;
+.hooper {  
+    height: 430px !important;
 }
 
 .start-page .areas-of-competence h2.areas-of-competence-header {
     font-size: 26px;
-    color: black;
+    color: white;
     font-family: Oswald,sans-serif;
     text-decoration: none;
     text-transform: uppercase;

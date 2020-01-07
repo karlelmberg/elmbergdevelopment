@@ -1,0 +1,153 @@
+﻿@import './static/scss/partials/_layout.scss';
+
+.sport {
+    //height: 2200px;
+    &.hide-sport {
+        display: none;
+    }
+
+    .sport-menu {
+        height: 50px;
+        width: 100%;
+        @include menucolorred;
+
+        .sport-button {
+            width: auto;
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #FFFFFF;
+
+            &:hover {
+                color: black;
+                transition: all .15s ease-out;
+            }
+
+            &.activeBtn {
+                color: #FFFFFF;
+                border-bottom: 3px solid white;
+            }
+
+            &.back-button {
+                float: right;
+                border-bottom: none;
+            }
+        }
+    }
+    /*.football-league-menu {
+        height: 50px;
+        width: 100%;
+        background-color: #d3132b;
+    }*/
+    .standings-table {
+        margin-top: 50px;
+
+        .standings-inner-table {
+            margin-bottom: 30px
+        }
+    }
+
+    .league-tables {
+
+        .landing__module-header {
+            color: slategray;
+        }
+
+        th {
+            @include menucolorred;
+            color: #FFFFFF;
+            height: 50px;
+        }
+
+        .table {
+
+            tr {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .football-news {
+    }
+}
+
+
+[v-cloak] .v-cloak--hidden {
+    display: none !important;
+}
+
+[v-cloak] .v-cloak--block {
+    display: block !important;
+}
+
+[v-cloak] .v-cloak--inline {
+    display: inline !important;
+}
+
+[v-cloak] .v-cloak--inlineBlock {
+    display: inline-block !important;
+}
+
+[v-cloak] .v-cloak--hidden {
+    display: none !important;
+}
+
+[v-cloak] .v-cloak--invisible {
+    visibility: hidden !important;
+}
+
+.v-cloak--block,
+.v-cloak--inline,
+.v-cloak--inlineBlock {
+    display: none !important;
+}
+
+@media screen and (max-width: 667px) {
+    .standings {
+        height: 800px;
+        margin-top:-20px;
+
+        .standings-table {
+            margin-top: 0;
+
+            .standings-inner-table {
+                margin-bottom: 0
+            }
+        }
+
+        h2 {
+            font-size: 12px;
+        }
+
+        .league-tables {
+
+            .table {
+
+                th {
+                    height: 0;
+                }
+
+                tr {
+                    font-size: 9px;
+
+                    td {
+                        padding: 0;
+
+                        /*&.table__item-icon {
+                            display: none;
+                        }*/
+
+                        /*&.table__item-description {
+                            display: none;
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+}

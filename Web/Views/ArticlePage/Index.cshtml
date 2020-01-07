@@ -20,32 +20,75 @@
                     {
                         <span></span>
                     }
-                </div> 
+                </div>
                 <div>
                     @{Html.RenderPartial("SocialMedia", Model);}
                 </div>
-                <div class="article-page-ingress">
-                    @Model.CurrentPage.Ingress
-                </div>
-                <div class="article-page-main-body">
-                    @Model.CurrentPage.MainBody
-                    <img src="~/Static/img/signature.png" class="article-page-signature" />
-                </div>         
+                @if (Model.CurrentPage.Ingress != null)
+                {
+                    <div class="article-page-ingress">
+                        @Model.CurrentPage.Ingress
+                    </div>
+                }
+                @if (Model.CurrentPage.MainBody != null)
+                {
+                    <div class="article-page-main-body">
+                        @Model.CurrentPage.MainBody
+                    </div>
+                }
+                @if (Model.CurrentPage.Code1Heading != null)
+                {
+                    <div class="code-heading">
+                        <strong>@Model.CurrentPage.Code1Heading</strong>
+                    </div>
+                }
+                @if (Model.CurrentPage.Code1 != null)
+                {
+                    <div class="code">
+                        <pre class="@Model.CurrentPage.Code1Decode">
+                        <code class="@Model.CurrentPage.Code1Decode">
+                                 @Model.CurrentPage.Code1
+                            </code>
+                         </pre>
+                    </div>
+                }    
+                @if (Model.CurrentPage.Code2Heading != null)
+                {
+                    <div class="code-heading">
+                        <strong>@Model.CurrentPage.Code2Heading</strong>
+                    </div>
+                }
+                @if (Model.CurrentPage.Code2 != null)
+                {
+                    <div class="code">
+                        <pre class="@Model.CurrentPage.Code2Decode">
+                            <code class="@Model.CurrentPage.Code2Decode">
+                                <!--language-csharp-->
+                                @Model.CurrentPage.Code2
+                            </code>
+                        </pre>
+                    </div>
+                }
+                @if (Model.CurrentPage.Code3Heading != null)
+                {
+                    <div class="code-heading">
+                        <strong>@Model.CurrentPage.Code3Heading</strong>
+                    </div>
+                }
+                @if (Model.CurrentPage.Code3Heading != null)
+                {
+                    <div class="code">
+                        <pre class="@Model.CurrentPage.Code3Decode">
+                        <code class="@Model.CurrentPage.Code3Decode">
+                            @Model.CurrentPage.Code3
+                        </code>
+                    </pre>
+                    </div>
+                }
+                <br />
+                <br />
+                <img src="~/Static/img/signature.png" class="article-page-signature" />
             </div>
         </div>
     </div>
 </div>
-
-
-
-@*@foreach (string categoryItem in Model.CurrentPage.NewsPageViewModel.CategoryListItems)
-    {
-    <span class="tag">@categoryItem    </span>
-    }*@
-
-@*@foreach (string categoryItem in Model.CurrentPage.NewsPageViewModel.ListOfCategories)
-    {
-    <span class="tag">@categoryItem</span>
-    }*@
-
-@*@{Html.RenderPartial("SocialMedia", Model);}*@

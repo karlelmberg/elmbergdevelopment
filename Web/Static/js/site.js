@@ -33,10 +33,32 @@
         }
     });
 
-    //$(".news-list-item").matchHeight({
-    //    byRow: true,
-    //    property: 'height',
-    //    target: null,
-    //    remove: false
-    //});
+    checkBrowser();
 });
+
+//Check if browser is Internet explorer
+
+function checkBrowser() {
+    var isIE = false || !!document.documentMode;
+    if (isIE) {
+        var ieCookieSet = readCookie('iECookieSet');
+        if (ieCookieSet != "true") {
+            $('#check-browser-modal').modal('show');
+        }
+    }
+}
+
+$('#close-check-browser-modal').click(function () {
+    document.cookie = "iECookieSet=true";
+});
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}

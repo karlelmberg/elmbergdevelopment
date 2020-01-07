@@ -3,3 +3,8 @@ C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\bin\Release\DataTransfer
 C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.csproj.CoreCompileInputs.cache
 C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.dll
 C:\Visual Studio\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.pdb
+C:\Projects\ElmbergDevelopment\DataTransferObjects\bin\Release\DataTransferObjects.dll
+C:\Projects\ElmbergDevelopment\DataTransferObjects\bin\Release\DataTransferObjects.pdb
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.csproj.CoreCompileInputs.cache
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.dll
+C:\Projects\ElmbergDevelopment\DataTransferObjects\obj\Release\DataTransferObjects.pdb

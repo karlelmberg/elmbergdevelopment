@@ -1,4 +1,5 @@
-﻿
+﻿@import './static/scss/partials/_layout.scss';
+
 /*Social Media*/
 
 .social-icons {
@@ -25,16 +26,16 @@
 
 .social-icons li a:hover {
     transition: all .15s ease-out;
-    color: red;
+    color: #adb5bd; 
 }
 
 .social-icons li a .social-icons-color {
-    color: #adb5bd;
+    /*color: #d3132b;*/
+    @include iconcolorred;
 }
 
-.social-icons li a .social-icons-color:hover {
-    color: #99c9ff;
-    ;
+.social-icons li a .social-icons-color:hover { 
+    color: #adb5bd;
     transition: all .15s ease-out;
 }
 
@@ -42,13 +43,9 @@
     transition: all .15s ease-out;
 }
 
-
-
 .social-icons li a.email:hover {
     transition: all .15s ease-out;
 }
-
-
 
 .social-icons li a.print:hover {
     transition: all .15s ease-out;
@@ -56,4 +53,19 @@
 
 .at-icon-wrapper {
     display: none !important;
+}
+
+@media screen and (max-width: 667px) {
+    .social-icons {
+        text-align:center;
+    }
+    
+    .social-icons li {
+        display: inline-block;
+        float:none;
+
+        &.divider{
+            display:none;
+        }
+    }
 }
