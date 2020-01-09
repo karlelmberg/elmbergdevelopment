@@ -83,23 +83,23 @@
                 &.slider {
 
                     &.buildings {
-                        background-image: url('../img/architectural-design-architecture-blue-sky-buildings-373584.jpg');
+                        background-image: url('../img/slider/architectural-design-architecture-blue-sky-buildings-373584.jpg');
                     }
 
                     &.temperature {
-                        background-image: url('../img/close-up-photography-of-snowflake-813872.jpg');
+                        background-image: url('../img/slider/close-up-photography-of-snowflake-813872.jpg');
                     }
 
                     &.sport {
-                        background-image: url('../img/multicolored-soccer-ball-on-green-field-47730.jpg');
+                        background-image: url('../img/slider/multicolored-soccer-ball-on-green-field-47730.jpg');
                     }
 
                     &.articles {
-                        background-image: url('../img/photo-of-person-reading-1928151.jpg');
+                        background-image: url('../img/slider/photo-of-person-reading-1928151.jpg');
                     }
 
                     &.news {
-                        background-image: url('../img/advertisements-batch-blur-business-518543.jpg');
+                        background-image: url('../img/slider/advertisements-batch-blur-business-518543.jpg');
                     }
                 }
 
@@ -167,29 +167,29 @@
                 }
 
                 &.lunch {
-                    background-image: url('../img/blur-close-up-cutlery-delicious.jpg');
+                    background-image: url('../img/lunch/blur-close-up-cutlery-delicious.jpg');
                     height: 430px;
 
                     .lunch-inner-box {
                         background: rgba(0, 0, 0, 0.8);
-                        height: 330px;
+                        height: 350px;
                         width: 85%;
                         color: white;
                         margin-left: 8%;
                         padding: 20px;
-                        position:relative;
+                        position: relative;
 
                         .lunch-inner-box-header {
                             margin-bottom: 20px;
                             font-size: 22px;
                         }
 
-                        .lunch-inner-box-link-container {                       
+                        .lunch-inner-box-link-container {
                             float: right;
                             cursor: pointer;
-                            position:absolute;
-                            bottom:20px;
-                            right:15px;
+                            position: absolute;
+                            bottom: 20px;
+                            right: 15px;
 
                             .lunch-inner-box-link {
                                 color: white !important;
@@ -234,15 +234,15 @@
     background-size: cover;
 
     &.sport {
-        background-image: url('../img/man-wakeboarding-over-body-of-water.jpg');
+        background-image: url('../img/box_picture/man-wakeboarding-over-body-of-water.jpg');
     }
 
     &.news {
-        background-image: url('../img/person-holding-white-and-blue-business-paper.jpg');
+        background-image: url('../img/box_picture/person-holding-white-and-blue-business-paper.jpg');
     }
 
     &.articles {
-        background-image: url('../img/person-reading-magazine.jpg');
+        background-image: url('../img/box_picture/person-reading-magazine.jpg');
     }
 
     .box-picture-text {
@@ -259,7 +259,7 @@
     }
 }
 
-.hooper {  
+.hooper {
     height: 430px !important;
 }
 
@@ -322,8 +322,36 @@
     margin-top: 67px;
 }
 
-@media screen and (max-width: 992px) {
-    
+
+@media screen and (max-width: 1199px) {
+
+    .box-full {
+
+        &.areas-of-competence-wrapper {
+            display: none;
+        }
+    }
+
+    &.lunch {
+
+        .lunch-inner-box {
+            height: 380px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    .box-full {
+
+        &.areas-of-competence-wrapper {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
     .box-two-third {
 
         &.top-boxes {

@@ -64,7 +64,6 @@
                 margin-top: 14px;
                 font-size: 22px;
 
-
                 li {
                     display: inline;
                     margin-left: 20px;
@@ -77,10 +76,10 @@
                         font-size: 22px;
 
                         :hover {
-                            @include iconandlinkhoovercolorred;
-                            /*color: #d3132b;*/
-                            transition: all .15s ease-out;
-                            border-bottom: 3px solid white;
+                            /*@include iconandlinkhoovercolorred;*/
+                            color: #0067b8 !important;
+                            transition: all .15s ease-out !important;
+                            border-bottom: 3px solid black !important;
                         }
                     }
 
@@ -93,41 +92,38 @@
 
             .log-in-search {
                 float: right;
+                margin-top: 8px;
 
                 .log-in {
                     display: inline;
 
                     a {
-                        @include iconcolorred;
-                        /*color: #d3132b;*/
                         font-size: 28px;
                         text-decoration: none;
 
                         :hover {
-                            color: white;
+                            color: #0067b8;
                         }
                     }
+                }
 
-                    .search {
+                .search {
+                    display: inline;
+                    margin-left: 8px;
+                    font-size: 26px;
+                    cursor: pointer;
+                    z-index: 100;
+
+                    :hover {
+                        color: #0067b8;
+                    }
+
+                    .search-up {
                         display: inline;
-                        margin-left: 8px;
-                        @include iconcolorred;
-                        /*color: #d3132b;*/
-                        font-size: 26px;
-                        cursor: pointer;
-                        z-index: 100;
+                    }
 
-                        .search:hover {
-                            color: white;
-                        }
-
-                        .search-up {
-                            display: inline;
-                        }
-
-                        .search-down {
-                            display: none;
-                        }
+                    .search-down {
+                        display: none;
                     }
                 }
             }
@@ -157,7 +153,8 @@
 
             .magnifying-glass {
                 margin-bottom: 20px;
-                @include iconcolorred;
+                /*@include iconcolorred;*/
+                color: #0067b8 !important;
             }
 
             .search-input {
@@ -177,40 +174,18 @@
 }
 
 
+@media screen and (max-width: 1024px) {
 
+    .container {
+     
+        ul.main-menu {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            li {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
 
 
 

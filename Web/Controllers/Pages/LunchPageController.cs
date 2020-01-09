@@ -132,17 +132,36 @@ namespace Web.Controllers.Pages
 
         public RestaurantViewModel GetDish(RestaurantViewModel restaurant)
         {
-            if (_dishes.Count >= 1)
+            if (restaurant.LunchHeader == "2 Valv och kök")
             {
-                restaurant.FirstDish = HttpUtility.HtmlDecode(_dishes[0].OuterHtml);
+                if (_dishes.Count >= 1)
+                {
+                    restaurant.FirstDish = HttpUtility.HtmlDecode(_dishes[0].OuterHtml);
+                }
+                if (_dishes.Count >= 2)
+                {
+                    restaurant.SecondDish = HttpUtility.HtmlDecode(_dishes[1].OuterHtml);
+                }
+                if (_dishes.Count >= 3)
+                {
+                    restaurant.VegitarianDish = HttpUtility.HtmlDecode(_dishes[2].OuterHtml);
+                }
             }
-            if (_dishes.Count >= 2)
+
+            if (restaurant.LunchHeader == "Percys")
             {
-                restaurant.SecondDish = HttpUtility.HtmlDecode(_dishes[1].OuterHtml);
-            }
-            if (_dishes.Count >= 3)
-            {
-                restaurant.VegitarianDish = HttpUtility.HtmlDecode(_dishes[2].OuterHtml);
+                if (_dishes.Count >= 1)
+                {
+                    restaurant.FirstDish = HttpUtility.HtmlDecode(_dishes[0].OuterHtml);
+                }
+                if (_dishes.Count >= 2)
+                {
+                    restaurant.SecondDish = HttpUtility.HtmlDecode(_dishes[_dishes.Count -2].OuterHtml);
+                }
+                if (_dishes.Count >= 3)
+                {
+                    restaurant.VegitarianDish = HttpUtility.HtmlDecode(_dishes[_dishes.Count - 3].OuterHtml);
+                }
             }
 
             return restaurant;

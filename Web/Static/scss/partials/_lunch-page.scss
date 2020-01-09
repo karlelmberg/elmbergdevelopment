@@ -43,8 +43,8 @@
 
         .lunch-heading {
             text-align: center;
-            margin-top: 100px;
-            margin-bottom: 30px;
+            margin-top: 90px;
+            margin-bottom: 40px;
 
             i {
                 margin-right: 10px;
@@ -71,28 +71,28 @@
         &.lunch {
 
             &.twoValve {
-                background-image: url('../img/2valv1.jpg');
+                background-image: url('../img/lunch/2valv1.jpg');
             }
 
             &.percys {
-                background-image: url('../img/percys.jpg');
+                background-image: url('../img/lunch/percys.jpg');
             }
 
             &.nilssons {
-                background-image: url('../img/nilssons.jpg');
+                background-image: url('../img/lunch/nilssons.jpg');
             }
 
             &.frilaget {
-                background-image: url('../img/frilaget.jpg');
+                background-image: url('../img/lunch/frilaget.jpg');
             }
         }
 
         .box-picture-text {
             background-color: #0067b8;
-            color:white;
+            color: white;
             height: 26px;
-            width: 174px;          
-            margin-left: 75%;          
+            width: 174px;
+            margin-left: 75%;
             text-align: center;
             font-size: 18px;
             position: absolute;
