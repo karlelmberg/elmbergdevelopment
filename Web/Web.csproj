@@ -347,6 +347,9 @@
     <Content Include="Static\img\spinner.gif" />
     <Content Include="Static\img\test_ico.png" />
     <Content Include="Static\img\wall-buildings.jpg" />
+    <Content Include="Static\img\weather\04n.png" />
+    <Content Include="Static\img\weather\10n.png" />
+    <Content Include="Static\img\weather\snow-tree.jpg" />
     <Content Include="Static\img\web-design.svg" />
     <Content Include="Static\img\web-development.svg" />
     <Content Include="Static\js\angular\app.js" />

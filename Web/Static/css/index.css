@@ -1003,8 +1003,6 @@ a:hover, a:visited, a:link, a:active {
     display: none; } }
 
 @media only screen and (max-width: 768px) {
-  .main {
-    margin-top: 100px; }
   .header {
     display: none; }
   .device-header {
@@ -1819,6 +1817,39 @@ a:hover, a:visited, a:link, a:active {
           width: 100px;
           margin-left: 22%;
           margin-right: 22%; }
+  .start-page .container .box-full-weather {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    background: white; }
+    .start-page .container .box-full-weather .header-box-weather {
+      background-image: url("../img/weather/snow-tree.jpg");
+      height: 70px; }
+      .start-page .container .box-full-weather .header-box-weather .header-inner-box-weather {
+        background: rgba(0, 0, 0, 0.6);
+        height: 70px;
+        padding-top: 22px; }
+        .start-page .container .box-full-weather .header-box-weather .header-inner-box-weather .weather-header {
+          color: white;
+          text-align: center;
+          font-size: 22px;
+          font-weight: 600; }
+    .start-page .container .box-full-weather .inner-box-weather {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px; }
+      .start-page .container .box-full-weather .inner-box-weather .box-weather-one-third .time {
+        font-weight: 500;
+        font-size: 16px; }
+      .start-page .container .box-full-weather .inner-box-weather .box-weather-one-third .temperature {
+        font-weight: 500;
+        font-size: 28px;
+        color: #0067b8; }
+      .start-page .container .box-full-weather .inner-box-weather .box-weather-one-third .wind {
+        font-weight: 500;
+        font-size: 17px;
+        color: #666666; }
   .start-page .container .box-two-third {
     background-color: white;
     margin-top: 15px;
@@ -2013,6 +2044,13 @@ a:hover, a:visited, a:link, a:active {
 @media screen and (max-width: 991px) {
   .box-two-third.top-boxes {
     display: none; } }
+
+@media screen and (max-width: 414px) {
+  .container.top-space-to-boxes {
+    margin-top: 80px !important; }
+  .container .box-full-weather .inner-box-weather .box-weather-one-third {
+    margin-bottom: 40px;
+    margin-top: 40px; } }
 
 /*.main {
     margin-top: 190px;

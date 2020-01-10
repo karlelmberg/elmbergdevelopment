@@ -66,6 +66,61 @@
             }
         }
 
+        .box-full-weather {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+
+            .header-box-weather {
+                background-image: url('../img/weather/snow-tree.jpg');
+                height: 70px;
+
+                .header-inner-box-weather {
+                    background: rgba(0, 0, 0, 0.6);
+                    height: 70px;
+                    padding-top: 22px;
+
+                    .weather-header {
+                        color: white;
+                        text-align: center;
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .inner-box-weather {
+                text-align: center;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                .box-weather-one-third {
+
+                    .time {
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+
+                    .weather-icon {
+                    }
+
+                    .temperature {
+                        font-weight: 500;
+                        font-size: 28px;
+                        color: #0067b8;
+                    }
+
+                    .wind {
+                        font-weight: 500;
+                        font-size: 17px;
+                        color: #666666;
+                    }
+                }
+            }
+        }
+
         .box-two-third {
             background-color: white;
             margin-top: 15px;
@@ -356,6 +411,27 @@
 
         &.top-boxes {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    .container {
+
+        &.top-space-to-boxes {
+            margin-top: 80px !important;
+        }
+
+        .box-full-weather {
+
+            .inner-box-weather {
+
+                .box-weather-one-third {
+                    margin-bottom: 40px;
+                    margin-top: 40px;
+                }
+            }
         }
     }
 }

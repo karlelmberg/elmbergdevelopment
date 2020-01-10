@@ -6,25 +6,25 @@
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <div class="box-two-third top-boxes">
                     <template>
-                        <hooper :progress="true" :itemsToShow="3" :auto-play="false" :playSpeed="1000000000" >
+                        <hooper :progress="true" :itemsToShow="3" :auto-play="false" :playSpeed="1000000000">
                             <slide>
                                 <div class="box-picture slider buildings">
                                     <div class="box-picture-text-long">
                                         Agile development for all corporations
                                     </div>
-                                </div>                             
+                                </div>
                             </slide>
                             <slide>
                                 <div class="box-picture slider temperature">
                                     <div class="box-picture-text-long">
                                         Se the latest weather and temperatures
                                     </div>
-                                </div>   
+                                </div>
                             </slide>
                             <slide>
                                 <div class="box-picture slider sport">
                                     <div class="box-picture-text-long">
-                                       Watch latest sport results
+                                        Watch latest sport results
                                     </div>
                                 </div>
                             </slide>
@@ -33,15 +33,15 @@
                                     <div class="box-picture-text-long">
                                         Read the latest articles in the development field
                                     </div>
-                                </div>   
+                                </div>
                             </slide>
                             <slide>
                                 <div class="box-picture slider news">
                                     <div class="box-picture-text-long">
                                         Se the latest tech news
                                     </div>
-                                </div>   
-                            </slide>                        
+                                </div>
+                            </slide>
                             <hooper-navigation slot="hooper-addons"></hooper-navigation>
                         </hooper>
                     </template>
@@ -145,105 +145,145 @@
                 </div>
             </div>
         </div>
-        <div class="box-full areas-of-competence-wrapper">
-            <div class="areas-of-competence-filter">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h1 class="start-page-header">Areas of competence</h1>
-                        <div class="header-line"></div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="box-full-weather">
+                    <div class="header-box-weather">
+                        <div class="header-inner-box-weather">
+                            <div class="weather-header">Weather</div>
+                        </div>
                     </div>
-                    <div class="inner-box-full">
+                    <div class="inner-box-weather">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="areas-of-competence">
-                                    <img src="~/Static/img/web-development.svg" class="web-development" />
-                                    <h2 class="areas-of-competence-header">Episerver development</h2>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="box-weather-one-third">
+                                    <div class="time">16.00</div>
+                                    <div class="weather-icon"><img src="~/Static/img/weather/04n.png" /></div>
+                                    <div class="temperature">6°</div>
+                                    <div class="wind">5 m/s</div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="areas-of-competence">
-                                    <img src="~/Static/img/responsive.svg" class="web-development" />
-                                    <h2 class="areas-of-competence-header">Web design</h2>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="box-weather-one-third">
+                                    <div class="time">16.00</div>
+                                    <div class="weather-icon"><img src="~/Static/img/weather/04n.png" /></div>
+                                    <div class="temperature">6°</div>
+                                    <div class="wind">5 m/s</div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="areas-of-competence">
-                                    <img src="~/Static/img/development.svg" class="web-development" />
-                                    <h2 class="areas-of-competence-header">Responsibility</h2>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <div class="box-weather-one-third">
+                                    <div class="time">16.00</div>
+                                    <div class="weather-icon"><img src="~/Static/img/weather/04n.png" /></div>
+                                    <div class="temperature">6°</div>
+                                    <div class="wind">5 m/s</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="box-one-third">
-                    <div class="box-header">
-                        <H4 class="box-header-text text-center">Sport</H4>
+            <div class="box-full areas-of-competence-wrapper">
+                <div class="areas-of-competence-filter">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <h1 class="start-page-header">Areas of competence</h1>
+                            <div class="header-line"></div>
+                        </div>
+                        <div class="inner-box-full">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="areas-of-competence">
+                                        <img src="~/Static/img/web-development.svg" class="web-development" />
+                                        <h2 class="areas-of-competence-header">Episerver development</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="areas-of-competence">
+                                        <img src="~/Static/img/responsive.svg" class="web-development" />
+                                        <h2 class="areas-of-competence-header">Web design</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="areas-of-competence">
+                                        <img src="~/Static/img/development.svg" class="web-development" />
+                                        <h2 class="areas-of-competence-header">Responsibility</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
-                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="box-one-third">
-                    <div class="box-header">
-                        <H4 class="box-header-text text-center">Articles</H4>
+
+
+            @*<div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="box-one-third">
+                            <div class="box-header">
+                                <H4 class="box-header-text text-center">Sport</H4>
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                            nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                        </div>
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
-                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="box-one-third">
-                    <div class="box-header">
-                        <H4 class="box-header-text text-center">News</H4>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="box-one-third">
+                            <div class="box-header">
+                                <H4 class="box-header-text text-center">Articles</H4>
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                            nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                        </div>
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
-                    nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
-                </div>
-            </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="box-one-third">
+                            <div class="box-header">
+                                <H4 class="box-header-text text-center">News</H4>
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat, tellus a vehicula lobortis,
+                            nulla nisl rhoncus lacus, vitae euismod sem urna ut eros. Maecenas faucibus at nisi eu efficitur.
+                        </div>
+                    </div>
+                </div>*@
         </div>
     </div>
-</div>
 
-@section scripts {
-    <script src="~/dist/startpage.bundle.js"></script>
-}
-
+    @section scripts {
+        <script src="~/dist/startpage.bundle.js"></script>
+    }
 
 
 
 
 
 
-@*<div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="background-grey">
-                <h1 class="start-page-header">About me</h1>
-                <div class="header-line"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="about-me">
-                                <div class="about-me-image">
 
-                                    <img src="~/Static/img/kalle_falsterbo.png" />
-                                </div>
-                                <div class="about-me-info">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae feugiat sapien, a sodales tortor.
-                                    Nam condimentum mauris sit amet consectetur egestas.
-                                    Donec ac diam ut eros commodo aliquet id vel nunc. Phasellus scelerisque nibh ac risus elementum egestas.
-                                    Mauris in tellus augue. Vestibulum eget massa a est feugiat viverra. Aliquam ac eros vitae nunc pellentesque aliquam non non dolor.
-                                    Maecenas laoreet, purus vel ultricies dapibus, erat elit cursus enim, eu consequat orci dolor a neque.
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+    @*<div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="background-grey">
+                    <h1 class="start-page-header">About me</h1>
+                    <div class="header-line"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="about-me">
+                                    <div class="about-me-image">
+
+                                        <img src="~/Static/img/kalle_falsterbo.png" />
+                                    </div>
+                                    <div class="about-me-info">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae feugiat sapien, a sodales tortor.
+                                        Nam condimentum mauris sit amet consectetur egestas.
+                                        Donec ac diam ut eros commodo aliquet id vel nunc. Phasellus scelerisque nibh ac risus elementum egestas.
+                                        Mauris in tellus augue. Vestibulum eget massa a est feugiat viverra. Aliquam ac eros vitae nunc pellentesque aliquam non non dolor.
+                                        Maecenas laoreet, purus vel ultricies dapibus, erat elit cursus enim, eu consequat orci dolor a neque.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>*@
+        </div>*@
