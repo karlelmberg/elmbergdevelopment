@@ -647,8 +647,14 @@ a:hover, a:visited, a:link, a:active {
               color: #0067b8 !important;
               transition: all .15s ease-out !important;
               border-bottom: 3px solid black !important; }
+          .header .main-header .container ul.main-menu li span {
+            color: darkgray;
+            font-family: Oswald,sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 22px; }
           .header .main-header .container ul.main-menu li i {
-            color: black;
+            color: darkgray;
             margin-right: 3px; }
       .header .main-header .container .log-in-search {
         float: right;
@@ -1841,7 +1847,7 @@ a:hover, a:visited, a:link, a:active {
       padding-bottom: 30px; }
       .start-page .container .box-full-weather .inner-box-weather .box-weather-one-third .time {
         font-weight: 500;
-        font-size: 16px; }
+        font-size: 18px; }
       .start-page .container .box-full-weather .inner-box-weather .box-weather-one-third .temperature {
         font-weight: 500;
         font-size: 28px;
@@ -2098,20 +2104,15 @@ a:hover, a:visited, a:link, a:active {
   .lunch .container.top-space-to-boxes {
     margin-top: 116px; }
   .lunch .container .box-two-third-container {
-    /*:hover {
-                transform: scale(1.05);
-                transition: all .1s ease-in-out;
-            }*/ }
+    height: 100%; }
     .lunch .container .box-two-third-container .box-two-third {
       background-color: white;
       margin-top: 15px;
       margin-bottom: 15px;
-      min-height: 316px;
-      /*:hover {
-                    transform: none;
-                }*/ }
+      /*min-height: 316px;*/ }
       .lunch .container .box-two-third-container .box-two-third .box-two-third-text-wrapper {
-        padding: 20px; }
+        padding: 20px;
+        height: 100%; }
         .lunch .container .box-two-third-container .box-two-third .box-two-third-text-wrapper .box-two-third-header {
           font-weight: 600;
           font-size: 22px;
@@ -2119,18 +2120,18 @@ a:hover, a:visited, a:link, a:active {
           text-align: center; }
         .lunch .container .box-two-third-container .box-two-third .box-two-third-text-wrapper .lunch-day-header h3 {
           font-size: 16px; }
-  .lunch .container .lunch-heading {
-    text-align: center;
-    margin-top: 90px;
-    margin-bottom: 40px; }
-    .lunch .container .lunch-heading i {
-      margin-right: 10px; }
-  .lunch .container .restuarant-heading {
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 10px; }
-  .lunch .container .incl-wrapper {
-    display: none; }
+    .lunch .container .box-two-third-container .lunch-heading {
+      text-align: center;
+      margin-top: 90px;
+      margin-bottom: 40px; }
+      .lunch .container .box-two-third-container .lunch-heading i {
+        margin-right: 10px; }
+    .lunch .container .box-two-third-container .restuarant-heading {
+      text-align: center;
+      margin-top: 70px;
+      margin-bottom: 10px; }
+    .lunch .container .box-two-third-container .incl-wrapper {
+      display: none; }
   .lunch .box-picture {
     position: relative;
     overflow: hidden;
@@ -2155,6 +2156,34 @@ a:hover, a:visited, a:link, a:active {
       position: absolute;
       bottom: 15px;
       right: 12px; }
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap; }
+
+.content {
+  height: 100%;
+  padding: 20px 20px 10px;
+  color: #fff; }
+
+.colour-1 {
+  background: #483C46;
+  color: #fff; }
+
+.colour-2 {
+  background: #3C6E71; }
+
+.colour-3 {
+  background: #70AE6E; }
+
+.colour-4 {
+  background: #82204A; }
+
+.colour-5 {
+  background: #558C8C; }
+
+.colour-6 {
+  background: #917C78; }
 
 @media screen and (max-width: 1200px) {
   .box-picture.lunch {

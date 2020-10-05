@@ -10,20 +10,17 @@
         }
 
         .box-two-third-container {
-            /*:hover {
-                transform: scale(1.05);
-                transition: all .1s ease-in-out;
-            }*/
+            height: 100%;
+
             .box-two-third {
                 background-color: white;
                 margin-top: 15px;
                 margin-bottom: 15px;
-                min-height: 316px;
-                /*:hover {
-                    transform: none;
-                }*/
+                /*min-height: 316px;*/
+
                 .box-two-third-text-wrapper {
                     padding: 20px;
+                    height: 100%;
 
                     .box-two-third-header {
                         font-weight: 600;
@@ -39,26 +36,26 @@
                     }
                 }
             }
-        }
 
-        .lunch-heading {
-            text-align: center;
-            margin-top: 90px;
-            margin-bottom: 40px;
+            .lunch-heading {
+                text-align: center;
+                margin-top: 90px;
+                margin-bottom: 40px;
 
-            i {
-                margin-right: 10px;
+                i {
+                    margin-right: 10px;
+                }
             }
-        }
 
-        .restuarant-heading {
-            text-align: center;
-            margin-top: 70px;
-            margin-bottom: 10px;
-        }
+            .restuarant-heading {
+                text-align: center;
+                margin-top: 70px;
+                margin-bottom: 10px;
+            }
 
-        .incl-wrapper {
-            display: none;
+            .incl-wrapper {
+                display: none;
+            }
         }
     }
 
@@ -100,6 +97,42 @@
             right: 12px;
         }
     }
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    height: 100%;
+    padding: 20px 20px 10px;
+    color: #fff;
+}
+
+.colour-1 {
+    background: #483C46;
+    color: #fff;
+}
+
+.colour-2 {
+    background: #3C6E71;
+}
+
+.colour-3 {
+    background: #70AE6E;
+}
+
+.colour-4 {
+    background: #82204A;
+}
+
+.colour-5 {
+    background: #558C8C;
+}
+
+.colour-6 {
+    background: #917C78;
 }
 
 @media screen and (max-width: 1200px) {

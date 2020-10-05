@@ -14,10 +14,13 @@ var start = new Vue({
     data: {
         listOfRestaurants: [],
         selectedRestaurant: {},
-        selectedRestaurantNr: 0
+        selectedRestaurantNr: 0, 
+        oneDayWeatherList: []
     },
 
     methods: {
+
+        //Lunch
         getOneDayLunch: function () {
             $('.spinner-background').show();
             $('.edspinner').show();
@@ -48,11 +51,32 @@ var start = new Vue({
                 this.selectedRestaurantNr = 0;
                 this.selectedRestaurant = this.listOfRestaurants[this.selectedRestaurantNr];
             }
+        }, 
+
+        //Weather
+        getOneDayWeather: function () {
+            $('.spinner-background').show();
+            $('.edspinner').show();
+            var self = this;
+            axios.get('/WeatherPage/GetOneDayWeather')
+                .then(function (response) {                   
+                    self.oneDayWeatherList = response.data;
+                    //self.selectedRestaurant = self.listOfRestaurants[self.selectedRestaurantNr];
+                    $('.edspinner').hide();
+                    $('.spinner-background').hide();
+                    $('.hide-vue').show();
+                })
+                .catch(error => {
+                    console.log(error);
+                    this.error = true;
+                    alert("error");
+                });
         } 
     },
 
     mounted() {
         this.getOneDayLunch();
+        this.getOneDayWeather();
     }
 });
 

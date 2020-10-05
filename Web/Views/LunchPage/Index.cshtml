@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </a>
-            </div>             
+            </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <a target="_blank" href="https://frilaget.gastrogate.com/">
                     <div class="box-two-third-container">
@@ -79,32 +79,189 @@
                 </a>
             </div>
         </div>
+    <div class="row row-flex">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a target="_blank" href="https://nilssonsrestaurang.gastrogate.com/">
+                <div class="box-two-third-container">
+                    <div class="box-two-third">
+                        <div class="box-picture lunch nilssons">
+                            <div class="box-picture-text">
+                                Nilssons
+                            </div>
+                        </div>
+                        <div class="box-two-third-text-wrapper">
+                            <div class="box-two-third-header">Nilssons</div>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a target="_blank" href="https://frilaget.gastrogate.com/">
+                <div class="box-two-third-container">
+                    <div class="box-two-third">
+                        <div class="box-picture lunch frilaget">
+                            <div class="box-picture-text">
+                                Friläget
+                            </div>
+                        </div>
+                        <div class="box-two-third-text-wrapper">
+                            <div class="box-two-third-header">Friläget</div>
+                            <p>This one has a bit longer content</p>
+                            <p>This one has a bit longer content</p>                              
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <h1>Same height columns in Bootstrap</h1>
+    <div class="row row-flex">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-1">
+                <h3>First column</h3>
+                <p>This one has a bit longer content</p>
+                <p>This one has a bit longer content</p>
+                <p>This one has a bit longer content</p>
+                <p>This one has a bit longer content</p>
+                <p>This one has a bit longer content</p>
+                <p>This one has a bit longer content</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-2">
+                <h3>Second column</h3>
+                <p>Normal content.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-3">
+                <h3>Third column</h3>
+                <p>Normal content.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-4">
+                <h3>Fourth column</h3>
+                <p>Normal content.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-5">
+                <h3>Fifth column</h3>
+                <p>Normal content.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="content colour-6">
+                <h3>Sixth column</h3>
+                <p>Normal content.</p>
+            </div>
+        </div>
+    </div>
         @*<div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <a target="_blank" href="/">
-                    <div class="box-two-third-container">
-                        <div class="box-two-third">
-                            <div class="box-two-third-text-wrapper">
-                                <div class="box-one-third-header">Percys</div>
-                                <p v-html=percysHtmlTable></p>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-one-third-header">Percys</div>
+                                    <p v-html=percysHtmlTable></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <a target="_blank" href="/">
-                    <div class="box-two-third-container">
-                        <div class="box-two-third">
-                            <div class="box-two-third-text-wrapper">
-                                <div class="box-one-third-header">Nilssons</div>
-                                <p v-html=nilssonsHtmlTable></p>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-one-third-header">Nilssons</div>
+                                    <p v-html=nilssonsHtmlTable></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </div>*@
+                    </a>
+                </div>
+            </div>*@
+        @*<div class="row" v-match-heights="{
+                el: ['.box-two-third-text-wrapper', 'p'],  // Array of selectors to fix ['h3', '.content', '.caption']
+                disabled: [ // Array of heights where the plugin will not set the heights
+                767, // If a string is provided this will be used as a max bound
+                [920, 1200], // If an array is provided it will be used as min-max bounds in that order
+                ]
+            }">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="https://nilssonsrestaurang.gastrogate.com/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-picture lunch nilssons">
+                                    <div class="box-picture-text">
+                                        Nilssons
+                                    </div>
+                                </div>
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-two-third-header">Nilssons</div>
+                                    <p>{{testAvMatchHeight1}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="https://frilaget.gastrogate.com/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-picture lunch frilaget">
+                                    <div class="box-picture-text">
+                                        Friläget
+                                    </div>
+                                </div>
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-two-third-header">Friläget</div>
+                                    <p>{{testAvMatchHeight2}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>*@
+        @*<div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-one-third-header">Percys</div>
+                                    <p v-html=percysHtmlTable></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <a target="_blank" href="/">
+                        <div class="box-two-third-container">
+                            <div class="box-two-third">
+                                <div class="box-two-third-text-wrapper">
+                                    <div class="box-one-third-header">Nilssons</div>
+                                    <p v-html=nilssonsHtmlTable></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>*@
+    </div>
+    <div class="container">
+       
     </div>
     <hr />
     <br />

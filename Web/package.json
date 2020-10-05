@@ -31,7 +31,8 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
-    "hooper": "^0.3.4"
+    "hooper": "^0.3.4",
+    "vue-match-heights": "^0.1.1"
   },
   "description": "elmbergdevelopment",
   "repository": {

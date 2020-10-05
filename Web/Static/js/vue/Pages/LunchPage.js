@@ -1,7 +1,6 @@
 ﻿import Vue from 'vue';
+//import VueMatchHeights from 'vue-match-heights';
 import LunchComponent from '../components/LunchComponent.vue';
-import FacebookFlowComponent from '../components/FacebookFlowComponent.vue';
-
 
 var lunch = new Vue({
     el: '#vueApp',
@@ -11,12 +10,11 @@ var lunch = new Vue({
             nilssonsHtmlTable: {},
             qualityViewHtmlTable: {},
             frilagetHtmlTable: {}, 
-            twoValveAndKitchenOneDayHtmlTable: {}
+            twoValveAndKitchenOneDayHtmlTable: {},          
     },
 
     components: {
-        "lunch-component": LunchComponent,
-        "facebook-flow-component": FacebookFlowComponent
+        "lunch-component": LunchComponent
     },
 
     methods: {
@@ -62,11 +60,18 @@ var lunch = new Vue({
                     this.error = true;
                     alert("error");
                 });
-        }   
+        },
+
+        //runMatchHeight: function () {
+        //    Vue.use(VueMatchHeights, {
+        //        disabled: [768] // Optional: default viewports widths to disabled resizing on. Can be overridden per usage
+        //    });
+        //}
     },
 
     mounted() {
-        this.getLunch(); 
+        this.getLunch();
+        //this.runMatchHeight();
     }  
 });
 

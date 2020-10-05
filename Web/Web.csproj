@@ -396,6 +396,7 @@
     <Compile Include="Controllers\Pages\StandardPageController.cs" />
     <Compile Include="Controllers\Pages\SportPageController.cs" />
     <Compile Include="Controllers\Pages\StartPageController.cs" />
+    <Compile Include="Controllers\Pages\WeatherPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -424,6 +425,7 @@
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\SportPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
+    <Compile Include="Models\Pages\WeatherPage.cs" />
     <Compile Include="Models\ViewModels\ArticleListPageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\LunchPageViewModel.cs" />
@@ -432,6 +434,7 @@
     <Compile Include="Models\ViewModels\ResultViewModel.cs" />
     <Compile Include="Models\ViewModels\SportPageViewModel.cs" />
     <Compile Include="Models\ViewModels\StartPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\WeatherPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Content Include="Static\js\vue\components\FacebookFlowComponent.vue" />

@@ -32,24 +32,28 @@
                                 @if (page.PageName == "Lunch")
                                 {
                                     <i class="fas fa-utensils"></i>
+                                    <a href="@page.PageUrl" title="@page.PageName">@page.PageName</a>
                                 }
                                 @if (page.PageName == "Sport")
                                 {
                                     <i class="fas fa-futbol"></i>
+                                    <span class="under-construction" href="@page.PageUrl" title="@page.PageName">@page.PageName</span>
                                 }
                                 @if (page.PageName == "Control Panel")
                                 {
                                     <i class="fas fa-cog"></i>
+                                    <span class="under-construction" href="@page.PageUrl" title="@page.PageName">@page.PageName</span>
                                 }
                                 @if (page.PageName == "Articles")
                                 {
                                     <i class="fas fa-file-alt"></i>
+                                    <span class="under-construction" href="@page.PageUrl" title="@page.PageName">@page.PageName</span>
                                 }
                                 @if (page.PageName == "News")
                                 {
                                     <i class="fas fa-newspaper"></i>
-                                }
-                                <a href="@page.PageUrl" title="@page.PageName">@page.PageName</a>
+                                    <span class="under-construction" href="@page.PageUrl" title="@page.PageName">@page.PageName</span>
+                                }                             
                             </li>
                         }
                     </ul>
