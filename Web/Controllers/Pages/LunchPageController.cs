@@ -44,12 +44,7 @@ namespace Web.Controllers.Pages
                 GetHtmlDataFromExternalUrl();
                 _node = _htmlDoc.DocumentNode.SelectNodes("//table[@class='table lunch_menu animation']").First();
                 _lunchPageViewModel.TwoValveAndKitchenHtmlTable = HttpUtility.HtmlDecode(_node.OuterHtml);
-
-                //PercysHtmlTable
-                _externalUrl = "https://percysrestaurang.gastrogate.com/lunch/";
-                GetHtmlDataFromExternalUrl();
-                _node = _htmlDoc.DocumentNode.SelectNodes("//table[@class='table lunch_menu animation']").First();
-                _lunchPageViewModel.PercysHtmlTable = HttpUtility.HtmlDecode(_node.OuterHtml);
+                _node.RemoveAll();
 
                 //NilssonsHtmlTable
                 _externalUrl = "https://nilssonsrestaurang.gastrogate.com/lunch/";
@@ -57,17 +52,23 @@ namespace Web.Controllers.Pages
                 _node = _htmlDoc.DocumentNode.SelectNodes("//table[@class='table lunch_menu animation']").First();
                 _lunchPageViewModel.NilssonsHtmlTable = HttpUtility.HtmlDecode(_node.OuterHtml);
 
-                //NilssonsHtmlTable
+                //Frilägeet
                 _externalUrl = "https://frilaget.gastrogate.com/lunch/";
                 GetHtmlDataFromExternalUrl();
                 _node = _htmlDoc.DocumentNode.SelectNodes("//table[@class='table lunch_menu animation']").First();
                 _lunchPageViewModel.FrilagetHtmlTable = HttpUtility.HtmlDecode(_node.OuterHtml);
 
+                //PercysHtmlTable
+                _externalUrl = "https://percysrestaurang.gastrogate.com/lunch/";
+                GetHtmlDataFromExternalUrl();
+                _node = _htmlDoc.DocumentNode.SelectNodes("//table[@class='table lunch_menu animation']").First();
+                _lunchPageViewModel.PercysHtmlTable = HttpUtility.HtmlDecode(_node.OuterHtml);
+                
                 return Json(_lunchPageViewModel, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return Json(_lunchPageViewModel, JsonRequestBehavior.AllowGet);
             }
         }
 
@@ -108,7 +109,7 @@ namespace Web.Controllers.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                return Json(_lunchPageViewModel, JsonRequestBehavior.AllowGet);
             }
         }
 

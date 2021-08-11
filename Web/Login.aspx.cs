@@ -16,6 +16,8 @@ namespace Web {
             // To enable password failures to trigger lockout, change to shouldLockout: true
             var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
 
+            //var result = SignInStatus.Success;
+
             switch (result) {
                 case SignInStatus.Success:
                     RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
